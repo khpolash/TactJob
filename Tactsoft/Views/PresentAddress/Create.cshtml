@@ -1,0 +1,135 @@
+﻿@model Tactsoft.Core.Entities.PresentAddress
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Preferred Areas Registraion Form</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">Preferred Areas info</h3>
+                </div>
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Present Address</label>
+                                    <div class="col-md-9 pt-2">
+                                        <label class="radio-inline mx-2">
+                                            @Html.RadioButtonFor(model => model.PresentInsideBangladesh, "Inside Bangladesh", htmlAttributes: new { @class = "form-check-input" }) Inside Bangladesh
+                                        </label>
+                                        <label class="radio-inline mx-2">
+                                            @Html.RadioButtonFor(model => model.PresentInsideBangladesh, "Outside Bangladesh", htmlAttributes: new { @class = "form-check-input" }) Outside Bangladesh
+                                        </label>
+
+                                        <br />
+                                        <span asp-validation-for="PresentInsideBangladesh" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Outside Bangladesh</label>
+                                    <div class="col-md-9">
+                                        <select asp-for="CountryId" class="form-control" asp-items="@(ViewBag.CountryId)">
+                                            <option value="">Select Country</option>
+                                        </select>
+                                        <span asp-validation-for="CountryId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Inside Bangladesh</label>
+                                    <div class="col-md-9">
+                                        <select asp-for="DistrictId" class="form-control" asp-items="@(ViewBag.DistrictId)">
+                                            <option value="">Select District</option>
+                                        </select>
+                                        <span asp-validation-for="DistrictId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Thana </label>
+                                    <div class="col-md-9">
+                                        <select asp-for="ThanaId" class="form-control" asp-items="@(ViewBag.ThanaId)">
+                                            <option value="">Select Organization </option>
+                                        </select>
+                                        <span asp-validation-for="ThanaId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Board </label>
+                                    <div class="col-md-9">
+                                        <select asp-for="BoardId" class="form-control" asp-items="@(ViewBag.BoardId)">
+                                            <option value="">Select Board </option>
+                                        </select>
+                                        <span asp-validation-for="BoardId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-2">
+                                    <label asp-for="PresentOthersAddress" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <textarea asp-for="PresentOthersAddress" class="form-control"></textarea>
+                                        <span asp-validation-for="PresentOthersAddress" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div style="text-align:end">
+                            <a class="btn btn-outline-danger btn-sm" asp-action="Index">
+                                <i class="far fa-window-close"></i> Cancel
+                            </a>
+                            <button type="submit" value="Create" class="btn btn-outline-primary btn-sm">
+                                <i class="far fa-save"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+
+
+
+
+
+
+

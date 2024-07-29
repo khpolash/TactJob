@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap-icons@1.10.3",
+      "destination": "wwwroot/plugins/bootstrap-icons/"
+    },
+    {
+      "library": "slick-carousel@1.8.1",
+      "destination": "wwwroot/plugins/slick-carousel/"
+    },
+    {
+      "library": "bootstrap@5.3.0-alpha1",
+      "destination": "wwwroot/plugins/bootstrap/"
+    },
+    {
+      "library": "jquery@3.6.4",
+      "destination": "wwwroot/plugins/jquery/"
+    },
+    {
+      "library": "aos@2.3.4",
+      "destination": "wwwroot/plugins/aos/"
+    },
+    {
+      "library": "magnific-popup.js@1.1.0",
+      "destination": "wwwroot/plugins/magnific-popup.js/"
+    },
+    {
+      "library": "font-awesome@6.3.0",
+      "destination": "wwwroot/plugins/font-awesome/"
+    },
+    {
+      "library": "bootstrap@5.2.3",
+      "destination": "wwwroot/plugins/bootstrap/"
+    }
+  ]
+}

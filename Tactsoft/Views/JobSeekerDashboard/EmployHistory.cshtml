@@ -1,0 +1,125 @@
+﻿@model Tactsoft.Core.Entities.EmployHistory
+
+<form asp-action="Create" asp-controller="EmployHistory" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="row mb-2">
+                    <label asp-for="CompanyName" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="CompanyName" class="form-control" />
+                        <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="CompanyBusinessName" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="CompanyBusinessName" class="form-control" />
+                        <span asp-validation-for="CompanyBusinessName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="CompanyLocation" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="CompanyLocation" class="form-control" />
+                        <span asp-validation-for="CompanyLocation" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="row mb-2">
+                    <label asp-for="Designation" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Designation" class="form-control" />
+                        <span asp-validation-for="Designation" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="Department" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Department" class="form-control" />
+                        <span asp-validation-for="Department" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label asp-for="EmployeFrom" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="EmployeFrom" class="form-control" />
+                        <span asp-validation-for="EmployeFrom" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label asp-for="EmployeTo" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="EmployeTo" class="form-control" />
+                        <span asp-validation-for="EmployeTo" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Currently Working</label>
+                    <div class="col-md-9 pt-2">
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" asp-for="CurrentWoring" />
+                            <label class="form-check-label" asp-for="CurrentWoring">@Html.DisplayNameFor(model => model.CurrentWoring)</label>
+                        </div>
+                        <br />
+                        <span asp-validation-for="CurrentWoring" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="Responsibility" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Responsibility" class="form-control" />
+                        <span asp-validation-for="Responsibility" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="ExpertiseId" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <select asp-for="ExpertiseId" class="form-control" asp-items="@(ViewBag.ExpertiseId)">
+                            <option value="">Select Expertise</option>
+                        </select>
+                        <span asp-validation-for="ExpertiseId" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="ExpertiseTo" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="ExpertiseTo" class="form-control" />
+                        <span asp-validation-for="ExpertiseTo" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="Duration" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Duration" class="form-control" />
+                        <span asp-validation-for="Duration" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</form>

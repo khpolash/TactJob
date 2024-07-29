@@ -1,0 +1,137 @@
+﻿@model Tactsoft.Core.Entities.Reference
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Company Registraion Form</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">Company info</h3>
+                </div>
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+
+
+
+                                <div class="row mb-2">
+                                    <label asp-for="ReferenceName" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="ReferenceName" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="ReferenceName" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                 <div class="row mb-2">
+                                    <label asp-for="Designation" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Designation" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="Designation" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                 <div class="row mb-2">
+                                    <label asp-for="Organization" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Organization" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="Organization" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                 <div class="row mb-2">
+                                    <label asp-for="Email" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Email" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="Mobile" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Mobile" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                 <div class="row mb-2">
+                                    <label asp-for="OffPhone" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="OffPhone" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="OffPhone" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                 <div class="row mb-2">
+                                    <label asp-for="ResPhone" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <input asp-for="ResPhone" class="form-control" placeholder="Company English Name" />
+                                        <span asp-validation-for="ResPhone" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label asp-for="RelativeId" class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-9">
+                                        <select asp-for="RelativeId" class="form-control" asp-items="ViewBag.RelativeId">
+                                            <option value="">Select Relative</option>
+                                        </select>
+                                        <span asp-validation-for="RelativeId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                          
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div style="text-align:end">
+                            <a class="btn btn-outline-danger btn-sm" asp-action="Index">
+                                <i class="far fa-window-close"></i> Cancel
+                            </a>
+                            <button type="submit" value="Create" class="btn btn-outline-primary btn-sm">
+                                <i class="far fa-save"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

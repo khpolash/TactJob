@@ -1,0 +1,198 @@
+﻿@model IEnumerable<Tactsoft.Core.Entities.PersonalDetails>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">@ViewData["Title"]</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <h3 class="card-title">@ViewData["Title"] List</h3>
+                        <a class="btn btn-outline-primary btn-sm" asp-action="Create">
+                            <i class="fa-regular fa-pen-to-square"></i> Add New
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FirstName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.LastName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FatherName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MotherName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.DateofBirth)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Gender)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Religion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.MaritalStatus)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Nationality)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.NationalId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PassportNumber)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PassportIssueDate)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PrimaryMobile)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.SecondaryMobile)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.EmergencContact)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PrimaryEmail)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.AlternateEmail)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.BloodGroupId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Height)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Weight)
+                                </th>
+
+
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FatherName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LastName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FatherName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MotherName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DateofBirth)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Gender)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Religion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaritalStatus)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nationality)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NationalId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PassportNumber)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PassportIssueDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PrimaryMobile)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SecondaryMobile)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.EmergencContact)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PrimaryEmail)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AlternateEmail)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.BloodGroup.BloodGroupName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Height)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Weight)
+                                    </td>
+
+                                    <td>
+                                        @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fa-regular fa-pen-to-square", @style = "color:green" }) |
+                                        @Html.ActionLink("", "Details", new { id = item.Id }, new { @class = "fa-regular fa-eye", @style = "color:blue" }) |
+                                        @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fa-regular fa-trash-can", @style = "color: red" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<partial name="~/Views/UIComponents/_bootstrapAlert.cshtml" />
+
+@section Scripts{
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": true, "autoWidth": true,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+    </script>
+}
+
+
+

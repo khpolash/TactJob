@@ -1,0 +1,465 @@
+﻿@model Tactsoft.Core.ViewModel.FrontendViewModel
+
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- =========== Profile Page Content Start =========== -->
+
+<div class="profile-page">
+	<div class="col-md-12">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="side-nav">
+					<a href="#"><i class="bi bi-house-door"></i> Home</a>
+					<button class="dropdown-btn manageResume-btn active">
+						Manage Resume
+						<i class='fas fa-chevron-down'></i>
+					</button>
+					<div class="dropdown-container collapse" id="manage-resume">
+						<a href="#">
+							<i class="bi bi-eye-fill"></i>
+							View Resume
+						</a>
+						<a href="#">
+							<i class="bi bi-grid-1x2-fill"></i>
+							Dashboard
+						</a>
+						<a href="#">
+							<i class="bi bi-file-earmark-text"></i>
+							Edit Resume
+						</a>
+						<a href="#">
+							<i class="bi bi-camera-reels-fill"></i>
+							Video Resume
+						</a>
+						<a href="#">
+							<i class="bi bi-files-alt"></i>
+							Personalized Resume
+						</a>
+						<a href="#">
+							<i class="bi bi-send"></i>
+							Email Resume
+						</a>
+					</div>
+					<button class="dropdown-btn invitation-btn">
+						Invitation
+						<i class='fas fa-chevron-down'></i>
+					</button>
+					<div class="dropdown-container" id="invitation">
+						<a href="#">
+							<i class="bi bi-person-video2"></i>
+							Live Interview
+						</a>
+						<a href="#">
+							<i class="bi bi-camera-reels-fill"></i>
+							Video Interview
+						</a>
+						<a href="#">
+							<i class="bi bi-envelope-fill"></i>
+							General Interview
+						</a>
+						<a href="#">
+							<i class="bi bi-file-bar-graph-fill"></i>
+							Online Test
+						</a>
+					</div>
+					<button class="dropdown-btn myActivites-btn">
+						My Activities
+						<i class='fas fa-chevron-down'></i>
+					</button>
+					<div class="dropdown-container" id="my-activities">
+						<a href="#">
+							<i class="bi bi-file-earmark-check-fill"></i>
+							Applied Jobs
+						</a>
+						<a href="#">
+							<i class="bi bi-send"></i>
+							Emailed Resume
+						</a>
+						<a href="#">
+							<i class="bi bi-star-fill"></i>
+							Shortlisted Jobs
+						</a>
+						<a href="#">
+							<i class="bi bi-person-video3"></i>
+							Following Employer
+						</a>
+					</div>
+					<button class="dropdown-btn employerActivites-btn">
+						Employer Activities
+						<i class='fas fa-chevron-down'></i>
+					</button>
+					<div class="dropdown-container" id="employer-activites">
+						<a href="#">
+							<i class="bi bi-filetype-pdf"></i>
+							Employer Viewed Resume
+						</a>
+					</div>
+					<button class="dropdown-btn assessment-btn">
+						Assessment
+						<i class='fas fa-chevron-down'></i>
+					</button>
+					<div class="dropdown-container" id="assessment">
+						<a href="#">
+							<i class="bi bi-journal-medical"></i>
+							Employability Certification
+						</a>
+						<a href="#">
+							<i class="bi bi-question-circle-fill"></i>
+							Assessment Help
+						</a>
+					</div>
+					<button class="dropdown-btn personalization-btn">
+						Personalization
+						<i class='fas fa-chevron-down'></i>
+					</button>
+					<div class="dropdown-container" id="personalization">
+						<a href="#">
+							<i class="bi bi-heart-fill"></i>
+							Favourite Search
+						</a>
+						<a href="#">
+							<i class="bi bi-bell-fill"></i>
+							SMS Job Alert
+						</a>
+						<a href="#">
+							<i class="bi bi-easel-fill"></i>
+							My Training
+						</a>
+					</div>
+					<hr>
+					<a href="#">
+						<i class="bi bi-gear"></i>
+						Account Setting
+					</a>
+					<a href="#">
+						<i class="bi bi-camera-reels"></i>
+						Help Videos
+					</a>
+					<a href="#">
+						<i class="bi bi-box-arrow-right"></i>
+						Sign Out
+					</a>
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<div class="information-area">
+					<div class="row">
+						<ul class="nav nav-pills" id="pills-tab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="pills-personal-tab" asp-action="Create" asp-controller="PersonalDetails" data-bs-toggle="pill" data-bs-target="#pills-personal" type="button" role="tab" aria-controls="pills-personal" aria-selected="true">
+									<i class="bi bi-person"></i>Personal Info
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-education-tab" data-bs-toggle="pill" data-bs-target="#pills-education" type="button" role="tab" aria-controls="pills-education" aria-selected="false">
+									<i class="bi bi-mortarboard"></i>Education//Trainings
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-address-tab" data-bs-toggle="pill" data-bs-target="#pills-address" type="button" role="tab" aria-controls="pills-address" aria-selected="false">
+									<i class="bi bi-house-door"></i>Address
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-training-tab" data-bs-toggle="pill" data-bs-target="#pills-training" type="button" role="tab" aria-controls="pills-training" aria-selected="false">
+									<i class="bi bi-easel"></i>Employment
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience" aria-selected="false">
+									<i class="bi bi-briefcase"></i> Other Information
+								</button>
+
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-phography-tab" data-bs-toggle="pill" data-bs-target="#pills-phography" type="button" role="tab" aria-controls="pills-phography" aria-selected="false">
+									<i class="bi bi-camera"></i>Photography
+								</button>
+							</li>
+						</ul>
+						<hr>
+						<div class="tab-content" id="pills-tabContent">
+							<div class="tab-pane fade show active" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab" tabindex="0">
+								<h4>Personal Information</h4>
+
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Personal Details
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												
+												<partial name="~/views/PersonalDetails/AddorEdit.cshtml" />
+												@*<a href="/PersonalDetails/AddorEdit/@ViewBag.jobseekerId"> Edit</a>*@
+
+												<a href="/PersonalDetails/AddorEdit/@ViewBag.jobseekerId"> Edit</a>
+                                                Deatils
+												<a asp-action="AddorEdit" class="text-decoration-none" asp-controller="PersonalDetails" asp-route-Id="@(ViewBag.jobseekerId)">  Deatils </a>
+
+											@*	<partial name="~/views/PersonalDetails/Details.cshtml" />*@
+												
+
+												
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="tab-pane" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab" tabindex="0">
+								<h4>Educational Information</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+											Education
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+
+												
+											</div>
+										</div>
+									</div>
+								</div>
+									<h4>Training Summary</h4>
+									<div class="accordion accordion-flush" id="accordionFlushExample">
+										<div class="accordion-item">
+											<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+											Training Summary
+												</button>
+											</h2>
+											<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+												<div class="accordion-body">
+
+													<partial name="TrainingSummary" />
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<h4>Professional Certification</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseOne">
+												ProfessionalCertification
+											</button>
+										</h2>
+										<div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+
+												<partial name="ProfessionalCertification" />
+
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+
+
+							<div class="tab-pane fade" id="pills-address" role="tabpanel" aria-labelledby="pills-address-tab" tabindex="0">
+								<h4>Present Address</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Present Address
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="PresentAddress" />
+											
+											</div>
+										</div>
+									</div>
+								</div>
+								<h4>Permanent Address</h4>
+
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Permanent Address
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="PermanentAddress" />
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<h4>Career And Application Information</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Career And Application Information
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="CareerAndApplicationInfo" />
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<h4>Preferred Areas</h4>
+
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Preferred Areas
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="PreferredAreas" />
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<h4>Other Relevant Information</h4>
+
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Other Relevant Information
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="OtherRelevantInformation" />
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="tab-pane fade" id="pills-experience" role="tabpanel" aria-labelledby="pills-experience-tab" tabindex="0">
+								<h4>Job Experience</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Job Seeker Skill
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="JobseekerSkill" />
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<h4>Language Proficiency</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Language Proficiency
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="LanguageProficiency" />
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<h4>Reference</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Reference
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="Reference" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+								
+							</div>
+
+							<div class="tab-pane fade" id="pills-training" role="tabpanel" aria-labelledby="pills-training-tab" tabindex="0">
+								<h4>Employ History</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Employ History
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+												<partial name="EmployHistory" />
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="tab-pane fade" id="pills-phography" role="tabpanel" aria-labelledby="pills-training-tab" tabindex="0">
+								<h4>Photography</h4>
+								<div class="accordion accordion-flush" id="accordionFlushExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+												Photography
+											</button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+											<div class="accordion-body">
+
+												<partial name="Photography" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =========== Profile Page Content End =========== -->

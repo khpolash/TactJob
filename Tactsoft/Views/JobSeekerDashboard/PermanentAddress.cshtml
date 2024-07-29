@@ -1,0 +1,86 @@
+﻿@model Tactsoft.Core.Entities.PermanentAddress
+
+<form asp-action="Create" asp-controller="PermanentAddress" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Present Address</label>
+                    <div class="col-md-9 pt-2">
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.PermanentInsideBangladesh, "Inside Bangladesh", htmlAttributes: new { @class = "form-check-input" }) Inside Bangladesh
+                        </label>
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.PermanentInsideBangladesh, "Outside Bangladesh", htmlAttributes: new { @class = "form-check-input" }) Outside Bangladesh
+                        </label>
+
+                        <br />
+                        <span asp-validation-for="PermanentInsideBangladesh" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Outside Bangladesh</label>
+                    <div class="col-md-9">
+                        <select asp-for="CountryId" class="form-control" asp-items="@(ViewBag.CountryId)">
+                            <option value="">Select Country</option>
+                        </select>
+                        <span asp-validation-for="CountryId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Inside Bangladesh</label>
+                    <div class="col-md-9">
+                        <select asp-for="DistrictId" class="form-control" asp-items="@(ViewBag.DistrictId)">
+                            <option value="">Select District</option>
+                        </select>
+                        <span asp-validation-for="DistrictId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Thana Name </label>
+                    <div class="col-md-9">
+                        <select asp-for="ThanaId" class="form-control" asp-items="@(ViewBag.ThanaId)">
+                            <option value="">Select Organization </option>
+                        </select>
+                        <span asp-validation-for="ThanaId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Board Name </label>
+                    <div class="col-md-9">
+                        <select asp-for="BoardId" class="form-control" asp-items="@(ViewBag.BoardId)">
+                            <option value="">Select Board </option>
+                        </select>
+                        <span asp-validation-for="BoardId" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="PermanentOthersAddress" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <textarea asp-for="PermanentOthersAddress" class="form-control"></textarea>
+                        <span asp-validation-for="PermanentOthersAddress" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+   
+</form>

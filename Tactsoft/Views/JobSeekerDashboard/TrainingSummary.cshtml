@@ -1,0 +1,84 @@
+﻿@model Tactsoft.Core.Entities.TrainingSummary
+
+
+
+
+
+<form asp-action="Create" asp-controller="TrainingSummary" method="post" enctype="multipart/form-data" class="row g-3">
+         <div class="card-body">
+             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Training Title</label>
+                                    <div class="col-md-9">
+                                        <input rows="4" asp-for="TrainingTitleName" class="form-control" />
+                                        <span asp-validation-for="TrainingTitleName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Country </label>
+                                    <div class="col-md-9">
+                                        <select asp-for="CountryId" class="form-control" asp-items="@(ViewBag.CountryId)">
+                                            <option value="">--Select Country--</option>
+                                        </select>
+                                        <span asp-validation-for="CountryId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Topics Covered</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="TopicsCovered" class="form-control" />
+                                        <span asp-validation-for="TopicsCovered" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Training Year</label>
+                                    <div class="col-md-9">
+                                        <select asp-for="YearId" class="form-control" asp-items="@(ViewBag.YearId)">
+                                            <option value="">Select Year</option>
+                                        </select>
+                                        <span asp-validation-for="YearId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Institute Name</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="InstituteName" class="form-control" />
+                                        <span asp-validation-for="InstituteName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Duration</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Duration" class="form-control" />
+                                        <span asp-validation-for="Duration" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Location</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Location" class="form-control" />
+                                        <span asp-validation-for="Location" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+ </form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

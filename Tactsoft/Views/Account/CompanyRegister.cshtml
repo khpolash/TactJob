@@ -1,0 +1,372 @@
+﻿@model Tactsoft.Core.ViewModel.CompanyRegisterViewModel
+@using Tactsoft.Core.Defaults;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link href="~/plugins/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="~/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+
+        /* SignUp Start =====================================*/
+        .signup-section {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            padding: 40px 0px;
+            overflow-x: hidden;
+        }
+
+            .signup-section .signup-body {
+                width: 50%;
+                margin: auto;
+                padding: 20px 20px;
+                border-style: solid;
+                border-color: #DBD6D6;
+                border-width: 1px;
+                background-color: white;
+                border-radius: 4px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+
+                .signup-section .signup-body .svg-img {
+                    width: 100%;
+                    border: none;
+                    text-align: center;
+                }
+
+                    .signup-section .signup-body .svg-img img {
+                        width: 130px;
+                        height: 90px;
+                    }
+
+                .signup-section .signup-body h4 {
+                    font-size: 24px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 600;
+                }
+
+                .signup-section .signup-body p {
+                    color: #6A6868;
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .signup-section .signup-body form input:focus {
+                    border-color: #272727;
+                    outline: #272727;
+                    box-shadow: none;
+                }
+
+                .signup-section .signup-body form .form-check input:checked {
+                    border-color: #272727;
+                    background-color: #272727;
+                }
+
+                .signup-section .signup-body form input, label {
+                    color: #272727;
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                }
+
+                .signup-section .signup-body form select {
+                    color: #272727;
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                }
+
+                .signup-section .signup-body form .signUp-btn {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    color: white;
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    margin: auto;
+                    background-color: #272727;
+                    border-style: solid;
+                    border-color: #272727;
+                    border-radius: 4px;
+                }
+
+                    .signup-section .signup-body form .signUp-btn:hover {
+                        background-color: #FC4501;
+                        border-color: #FC4501;
+                        transition: .6s ease-in-out;
+                    }
+
+        form #togglePassword, #toggleConPassword {
+            position: relative;
+            top: -29px;
+            left: 94%;
+            cursor: pointer;
+        }
+        /*  SignUp End ===================================*/
+
+        @@media only screen and (max-width:991px) {
+            .signup-section .signup-body {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========== SignUp Start =========== -->
+    <div class="signup-section">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="signup-body">
+                    <div class="svg-img">
+                        <img src="~/assets/img/undraw_sign__up_nm4k.svg" class="img-fluid" alt="Login">
+                    </div>
+                    <h4 class="text-center mt-4"> Company SignUp</h4>
+                    <p class="text-center">Lorem, ipsum, dolor sit amet consectetur</p>
+                    <form asp-action="CompanyRegister" asp-controller="Account" method="post" class="row g-3 needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="col-md-6">
+                            <label asp-for="UserName" class="form-label"></label>
+                            <input asp-for="UserName" class="form-control" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label asp-for="CompanyEmailAdress" class="form-label"></label>
+                            <input asp-for="CompanyEmailAdress" class="form-control" />
+                            <span asp-validation-for="CompanyEmailAdress" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="col-md-10">
+                            <label asp-for="Entrepreneur" class="form-label"></label>
+                            
+                            <div class="form-check form-check-inline">
+                                <label>
+                                    @Html.RadioButtonFor(model => model.Entrepreneur, "Yes", htmlAttributes: new { @class = "" }) Yes
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label>
+                                    @Html.RadioButtonFor(model => model.Entrepreneur, "No", htmlAttributes: new { @class = "" }) No
+                                </label>
+                            </div>
+                           
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                           
+                        </div>
+
+                        <div class="col-md-12">
+                            <label asp-for="CompanySizeId" class="form-label"></label>
+                            <select asp-for="CompanySizeId" class="form-control" asp-items="@(ViewBag.CompanySizeId)">
+                                <option value="">Select Company Size</option>
+                            </select>
+                            <span asp-validation-for="CompanySizeId" class="text-danger"></span>
+                        </div>
+
+                        
+
+
+
+                        <div class="col-md-6">
+                            <label asp-for="CompanyNameEnglishName" class="form-label"></label>
+                            <input asp-for="CompanyNameEnglishName" class="form-control" />
+                            <span asp-validation-for="CompanyNameEnglishName" class="text-danger"></span>
+                        </div>
+
+
+
+
+                        <div class="col-md-6">
+                            <label asp-for="CompanyNameBanglaName" class="form-label"></label>
+                            <input asp-for="CompanyNameBanglaName" class="form-control" />
+                            <span asp-validation-for="CompanyNameBanglaName" class="text-danger"></span>
+                        </div>
+
+                         <div class="col-md-12">
+                            <label asp-for="CountryId" class="form-label"></label>
+                            <select asp-for="CountryId" class="form-control" asp-items="@(ViewBag.CountryId)">
+                                <option value="">Select Country</option>
+                            </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label asp-for="DistrictId" class="form-label"></label>
+                            <select asp-for="DistrictId" class="form-control" asp-items="@(ViewBag.DistrictId)">
+                                <option value="">Select District</option>
+                            </select>
+                            <span asp-validation-for="DistrictId" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label asp-for="ThanaId" class="form-label"></label>
+                            <select asp-for="ThanaId" class="form-control" asp-items="@(ViewBag.ThanaId)">
+                                <option value="">Select Thana</option>
+                            </select>
+                            <span asp-validation-for="ThanaId" class="text-danger"></span>
+                        </div>
+
+                       
+
+
+                         <div class="col-md-6">
+                            <label asp-for="BusinessDescription" class="form-label"></label>
+                            <input asp-for="BusinessDescription" class="form-control" />
+                            <span asp-validation-for="BusinessDescription" class="text-danger"></span>
+                        </div>
+
+                         <div class="col-md-6">
+                            <label asp-for="BusinessTradeLicienceNo" class="form-label"></label>
+                            <input asp-for="BusinessTradeLicienceNo" class="form-control" />
+                            <span asp-validation-for="BusinessTradeLicienceNo" class="text-danger"></span>
+                        </div>
+
+                         <div class="col-md-6">
+                            <label asp-for="RLNO" class="form-label"></label>
+                            <input asp-for="RLNO" class="form-control" />
+                            <span asp-validation-for="RLNO" class="text-danger"></span>
+
+
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="WebsiteUrl" class="form-label"></label>
+                            <input asp-for="WebsiteUrl" class="form-control" />
+                            <span asp-validation-for="WebsiteUrl" class="text-danger"></span>
+                        </div>
+
+
+
+                         <div class="col-md-6">
+                            <label asp-for="ContactPersonName" class="form-label"></label>
+                            <input asp-for="ContactPersonName" class="form-control" />
+                            <span asp-validation-for="ContactPersonName" class="text-danger"></span>
+                        </div>
+
+
+                         <div class="col-md-6">
+                            <label asp-for="ContactPersonDesignation" class="form-label"></label>
+                            <input asp-for="ContactPersonDesignation" class="form-control" />
+                            <span asp-validation-for="ContactPersonDesignation" class="text-danger"></span>
+                        </div>
+
+
+                         <div class="col-md-6">
+                            <label asp-for="ContactPersonEmail" class="form-label"></label>
+                            <input asp-for="ContactPersonEmail" class="form-control" />
+                            <span asp-validation-for="ContactPersonEmail" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <label asp-for="ContactPersonMobile" class="form-label"></label>
+                            <input asp-for="ContactPersonMobile" class="form-control" />
+                            <span asp-validation-for="ContactPersonMobile" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <label asp-for="IndustialTypeId" class="form-label"></label>
+                            <select asp-for="IndustialTypeId" class="form-control" asp-items="@(ViewBag.IndustialTypeId)">
+                                <option value="">Select Industial Type</option>
+                            </select>
+                            <span asp-validation-for="IndustialTypeId" class="text-danger"></span>
+                        </div>
+
+
+
+                       
+                        <div class="col-md-6">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <i class="bi bi-eye-slash" id="togglePassword"></i>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="ConfirmPassword" class="form-label"></label>
+                            <input asp-for="ConfirmPassword" class="form-control" />
+                            <i class="bi bi-eye-slash" id="toggleConPassword"></i>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                       
+
+
+                        <div class="col-md-12">
+                            <label asp-for="CompanyAddressBangla" class="form-label"></label>
+                            <textarea asp-for="CompanyAddressBangla" class="form-control"></textarea>
+                            <span asp-validation-for="CompanyAddressBangla" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label asp-for="CompanyAddressEnglish" class="form-label"></label>
+                            <textarea asp-for="CompanyAddressEnglish" class="form-control"></textarea>
+                            <span asp-validation-for="CompanyAddressEnglish" class="text-danger"></span>
+                        </div>
+                       
+                        <div class="col-12">
+                            <button class="btn btn-primary signUp-btn btn-sm" type="submit">SignUp</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========== SignUp End =========== -->
+
+
+    <script src="~/plugins/jquery/jquery.js"></script>
+
+    <script>
+
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#Password");
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        const toggleConPassword = document.querySelector("#toggleConPassword");
+        const conPassword = document.querySelector("#ConfirmPassword");
+        toggleConPassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = conPassword.getAttribute("type") === "password" ? "text" : "password";
+            conPassword.setAttribute("type", type);
+
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        $('input[type=radio][name=userId]').on('change', function () {
+            switch ($(this).val()) {
+                case 'emailAdd':
+                    document.getElementById('UserName').setAttribute("value", document.getElementById("EmailAddress").value);
+                    break;
+                case 'phoneNo':
+                    document.getElementById('UserName').setAttribute("value", document.getElementById("PhoneNumber").value);
+                    break;
+            }
+        });
+
+    </script>
+
+</body>
+</html>

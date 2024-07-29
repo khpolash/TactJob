@@ -1,0 +1,165 @@
+﻿@model Tactsoft.Core.Entities.AcademicSummary
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Academic Summary Update Form</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">Academic Summary info</h3>
+                </div>
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+
+
+
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Level of Education </label>
+                                    <div class="col-md-9">
+                                        <select asp-for="LevelofEducationId" class="form-control" asp-items="@(ViewBag.LevelofEducationId)">
+                                            <option value="">Select Level of Education</option>
+                                        </select>
+                                        <span asp-validation-for="LevelofEducationId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Exam/Degree Title</label>
+                                    <div class="col-md-9">
+                                        <select asp-for="degreeTitleId" class="form-control" asp-items="@(ViewBag.degreeTitleId)">
+                                            <option value="">Select Degree Title</option>
+                                        </select>
+                                        <span asp-validation-for="degreeTitleId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Concentration/ Major/Group</label>
+                                    <div class="col-md-9">
+                                        <input rows="4" asp-for="Group" class="form-control" />
+                                        <span asp-validation-for="Group" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Board</label>
+                                    <div class="col-md-9">
+                                        <select asp-for="boardId" class="form-control" asp-items="@(ViewBag.boardId)">
+                                            <option value="">Select Board</option>
+                                        </select>
+                                        <span asp-validation-for="boardId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Institute Name</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="InstituteName" class="form-control" />
+                                        <span asp-validation-for="InstituteName" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+
+                                    <div class="col-md-9 pt-2">
+                                        <div class="form-check form-check-inline">
+                                            <input type="checkbox" class="form-check-input" asp-for="foreigInstitute" />
+                                            <label class="form-check-label" asp-for="foreigInstitute">This is a foreign institute</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Country of Foreign University</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="ForeignUniversityName" class="form-control" />
+                                        <span asp-validation-for="ForeignUniversityName" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Result</label>
+                                    <div class="col-md-9">
+                                        <select asp-for="ResultId" class="form-control" asp-items="@(ViewBag.ResultId)">
+                                            <option value="">Select Result</option>
+                                        </select>
+                                        <span asp-validation-for="ResultId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Year of Passing </label>
+                                    <div class="col-md-9">
+                                        <select asp-for="YearOfPassingId" class="form-control" asp-items="@(ViewBag.YearOfPassingId)">
+                                            <option value="">Select Year of Passing </option>
+                                        </select>
+                                        <span asp-validation-for="YearOfPassingId" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Duration (Years)</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Duration" class="form-control" />
+                                        <span asp-validation-for="Duration" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Achievement</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Achievement" class="form-control" />
+                                        <span asp-validation-for="Achievement" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div style="text-align:end">
+                            <a class="btn btn-outline-danger btn-sm" asp-action="Index">
+                                <i class="far fa-window-close"></i> Cancel
+                            </a>
+                            <button type="submit" value="Create" class="btn btn-outline-primary btn-sm">
+                                <i class="far fa-save"></i> Update
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

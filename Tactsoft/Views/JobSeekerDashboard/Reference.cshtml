@@ -1,0 +1,97 @@
+﻿@model Tactsoft.Core.Entities.Reference
+
+
+<form asp-action="Create" asp-controller="Reference" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+
+
+
+                <div class="row mb-2">
+                    <label asp-for="ReferenceName" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="ReferenceName" class="form-control"  />
+                        <span asp-validation-for="ReferenceName" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="Designation" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Designation" class="form-control"  />
+                        <span asp-validation-for="Designation" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="Organization" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Organization" class="form-control"  />
+                        <span asp-validation-for="Organization" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="Email" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Email" class="form-control"  />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="Mobile" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Mobile" class="form-control"  />
+                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="OffPhone" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="OffPhone" class="form-control" />
+                        <span asp-validation-for="OffPhone" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label asp-for="ResPhone" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="ResPhone" class="form-control"  />
+                        <span asp-validation-for="ResPhone" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="RelativeId" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <select asp-for="RelativeId" class="form-control" asp-items="ViewBag.RelativeId">
+                            <option value="">Select Relative</option>
+                        </select>
+                        <span asp-validation-for="RelativeId" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    
+</form>

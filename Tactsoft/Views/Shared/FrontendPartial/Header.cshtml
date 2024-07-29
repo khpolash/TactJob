@@ -1,0 +1,75 @@
+﻿<!-- =========== Header Start =========== -->
+<div class="header">
+	<div class="col-md-12">
+		<div class="row">
+			<div class="d-flex justify-content-between">
+				<div class="d-flex">
+					<div class="welcomeTxt">
+						<span>Welcome to TACTSOFT</span>
+					</div>
+					<div class="language">
+						<div class="dropdown">
+							<a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="bi bi-globe"></i>
+								EN
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">EN</a></li>
+								<li><a class="dropdown-item" href="#">DE</a></li>
+								<li><a class="dropdown-item" href="#">RU</a></li>
+								<li><a class="dropdown-item" href="#">ES</a></li>
+								<li><a class="dropdown-item" href="#">FR</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="top-header-search">
+						<a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+							<i class="bi bi-search"></i>
+						</a>
+					</div>
+				</div>
+                <div class="profile">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      @*          <img src="assets/img/profile.jpg" class="img-fluid" alt="profile">*@
+                                <span>@User.Identity.Name</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-action="index" asp-controller="JobSeekerDashboard">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="#">Setting</a></li>
+                                <li><a class="dropdown-item" href="#">My Messages</a></li>
+                                <li><a class="dropdown-item" href="#">My Jobs</a></li>
+                                <li><a class="dropdown-item" href="#">My Bids</a></li>
+                                <li><a class="dropdown-item" href="#">My Portfolio</a></li>
+                                <li><a class="dropdown-item" href="#">My Bookmarks</a></li>
+                                <li><a class="dropdown-item" href="#">Payments</a></li>
+                                <li><a href="/Account/Logout" class="dropdown-item">Logout</a></li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="account">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>SignIn Or Create Account</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <div class="d-flex justify-content-around">
+                                        <a asp-action="Login" asp-controller="Account" class="signIn-btn">SignIn</a>
+                                        <a asp-action="Register" asp-controller="Account" class="signUp-btn">SignUp</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    }
+
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =========== Header End =========== -->

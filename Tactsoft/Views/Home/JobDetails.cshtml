@@ -1,0 +1,122 @@
+﻿@model Tactsoft.Core.Entities.PostingJobs
+
+@{
+    ViewData["Title"] = "JobDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="job-details">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="job-details-box">
+                <div class="row">
+                    <h5 class="mb-4">Category: <span>@Model.JobCategory.JobCategoryeName</span></h5>
+                    <div class="col-md-9">
+                        <h4 class="job-title">@Model.JobTittle</h4>
+                        <div class="row mb-4">
+                            <div class="col-md-8">
+                                <h6 class="company-name">@Model.CompanyName</h6>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#" class="all-jobs text-center">View all jobs of this company</a>
+                            </div>
+                        </div>
+                        <div class="vacancy mb-4">
+                            <h5>Vacancy</h5>
+                            <p>05</p>
+                        </div>
+                        <div class="job-responsibilities mb-4">
+                            <h5>Job Responsibilities</h5>
+                            <p>
+                                @Model.JobResponsibillites
+                            </p>
+                        </div>
+                        <div class="employee-status mb-4">
+                            <h5>Employee Status</h5>
+                            <p>@Model.EmployeeStatus</p>
+                        </div>
+                        <div class="workplace mb-4">
+                            <h5>Workplace</h5>
+                            <p>@Model.Workathome</p>
+                            <p>@Model.WorkatOffice</p>
+                        </div>
+                        <div class="educational-requirments mb-4">
+                            <h5>Educational Requirments</h5>
+                            <ul>
+                                <li>
+                                    @Model.AdditionalRequirements
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="additional-requirements mb-4">
+                            <h5>Additional Requirements</h5>
+                            <ul>
+                                @Model.AdditionalRequirements
+                            </ul>
+                        </div>
+                        <div class="job-location mb-4">
+                            <h5>Job Location</h5>
+                            <p>@Model.JobLocation</p>
+                        </div>
+                        <div class="salary mb-4">
+                            <h5>MinSalary</h5>
+                            <p>@Model.MinimumSalary</p>
+                        </div>
+
+                        <div class="salary mb-4">
+                            <h5>MaxSalary</h5>
+                            <p>@Model.MaximumSalary</p>
+                        </div>
+                        <div class="benifits mb-5">
+                            <h5>Compensation & Other Benefits</h5>
+                            <ul>
+                                <li>@Model.Nah</li>
+                                <li>@Model.TA</li>
+                                <li>@Model.MedicalAllowance</li>
+                                <li>@Model.TourAllowance</li>
+                                <li>@Model.CreditCard</li>
+                                <li>@Model.MoblieBil</li>
+                                <li>@Model.PensionPlicy</li>
+                                <li>@Model.ProfitShare</li>
+                                <li>@Model.MoblieBil</li>
+                                <li>@Model.Providantfund</li>
+                                <li>@Model.Wekekly2Holidays</li>
+                                <li>@Model.InsuranceGratulty</li>
+                                <li>@Model.OverTimeAllowoanec</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="summery-box mb-5">
+                            <h5 class="box-title">Job Summery</h5>
+                            <div class="p-3">
+                                <h5>Published On: <span>@Model.publishon.ToString("dd/MM/yyyy")</span></h5>
+                                <h5>Vacancy: <span>5</span></h5>
+                                <h5>Employment Status: <span>@Model.EmployeeStatus</span></h5>
+                                <h5>Experience: <span>At least @Model.Mainage to @Model.MaximumYearofExperience  year(s)</span></h5>
+                                <h5>Age: <span> @Model.MinimumYearofExperience to @Model.Maxage  year(s)</span></h5>
+                                <h5>Job Location: <span>@Model.JobLocation</span></h5>
+                                <h5>Salary:  <span> @Model.MinimumSalary to @Model.MaximumSalary  </span></h5>
+                                <h5>Application Deadline: <span>@Model.ApplicationDeadline.ToString("dd/MM/yyyy")</span></h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="apply-procedure">
+                        <h5>Read Before Apply</h5>
+                        <div class="line mb-5"></div>
+
+                        <a class="dropdown-item" asp-action="JobApp" asp-controller="Home" asp-route-Id="@Model.Id"> <button>Apply</button></a>
+
+                    
+                    </div>
+                    <div class="dead-line text-center mt-4">
+                        <p><b>Deadline:</b> @Model.ApplicationDeadline</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,1356 @@
+﻿@model Tactsoft.Core.ViewModel.FrontendViewModel
+
+@{
+	Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employer Dashboard</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/fab-icon.png">
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+	<!-- Bootstrap5 -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fonts/bootstrap-icons.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+	<!-- My CSS -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<!-- My Responsive CSS -->
+	<link href="assets/css/responsive.css" rel="stylesheet">
+<style>
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+
+
+ /*card code start*/
+ .jobs-card{
+    width: 70%;
+    padding: 4px 26px;
+    font-family: 'Roboto', sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 6px;
+    margin-bottom: 1px;
+	line-height: 14px;
+}
+a .jobs-card:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: .6s;
+}
+ a .job-title{
+    color: #FC4501;
+    font-family: 'Roboto', sans-serif;
+			text-decoration: underline;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.job-titles{
+color: #C70039;
+font-family: 'Roboto', sans-serif;
+text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.browse-jobs  a .job-title:hover{
+    text-decoration: underline;
+}
+.browse-jobs .job-category-list a .company-name{
+    color: #272727;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.browse-jobs .job-category-list a .location{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0px;
+    margin-top: 12px;
+}
+.browse-jobs .job-category-list a .location .icon{
+    padding-right: 10px;
+} 
+.browse-jobs .job-category-list a .education{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.browse-jobs .job-category-list a .education .icon{
+    padding-right: 10px;
+}
+
+
+/*
+ card code end */
+    Header Start
+=================================*/
+.header{
+    width: 100%;
+    padding: 0px 70px;
+    border: none;
+    background-color: #272727;
+}
+.header a{
+    display: block;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 8px 14px;
+}
+.header a:hover{
+    background-color: #FC4501;
+}
+.header a.active{
+    background-color: #FC4501;
+}
+/*
+    Header End
+=================================*/
+
+
+/*
+    Navbar Start
+=================================*/
+nav{
+    padding: 12px 0px!important;
+}
+nav .navbar-brand{
+    width: 130px;
+}
+nav .navbar-nav .nav-item .nav-link{
+    color: #272727;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+nav .navbar-nav .nav-item .nav-link:hover{
+    color: #FC4501;
+    transition: .6s;
+}
+nav .navbar-nav .dropdown .nav-link .icon i{
+    font-size: 12px;
+    padding-left: 2px;
+}
+nav .navbar-nav .dropdown .nav-link[aria-expanded="true"] .icon i{
+  transition: .5s;
+  transform: rotate(180deg);
+}
+nav .navbar-nav .dropdown .dropdown-menu{
+ border-style: none;
+ border-radius: 0px;
+ padding: 0px;
+}
+nav .navbar-nav .dropdown .dropdown-menu hr{
+    margin: 0;
+    padding: 0;
+}
+nav .navbar-nav .dropdown .dropdown-menu .dropdown-item{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #272727;
+    padding: 8px 40px 8px 20px;
+}
+nav .navbar-nav .dropdown .dropdown-menu .dropdown-item:hover{
+    color: #FC4501;
+    background-color: #E7E7E7!important;
+    font-weight: 600;
+    transition: .6s;
+}
+nav .navbar-nav .dropdown .dropdown-menu .dropdown-item i{
+    padding-right: 5px;
+}
+/*
+    Navbar End
+=================================*/
+
+
+/*
+    Nav pill Start
+=================================*/
+#nav-pills .nav-pills{
+    padding: 0px 14px;
+    background-color: #03dbac;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+#nav-pills .nav-pills .nav-item:hover{
+    background-color: #02AA85;
+}
+#nav-pills .nav-pills .nav-item .nav-link{
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 10px 30px;
+    border-right: 1px solid white;
+    border-radius: 0px;
+}
+#employersPanel{
+    border-left: 1px solid white;
+}
+#nav-pills .nav-pills .nav-item .nav-link.active{
+    background-color: #02AA85!important;
+    border-radius: 0px;
+}
+/*
+    Nav pill End
+=================================*/
+
+
+/*
+  Search CV Bank & Post Job Button Start
+=================================*/
+.link-btn-area{
+    padding: 20px 165px;
+}
+.link-btn-area a{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+/*
+ Search CV Bank & Post Job Button End
+=================================*/
+
+
+/*
+ Job List Start
+=================================*/
+.job-list{
+    width: 100%;
+    padding: 40px 80px;
+    background-color: #FBF9F9;
+    overflow-x: hidden;
+}
+.job-list .heading h2{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.job-list  form label{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.job-list  form input{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.job-list  form select,option{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.job-list form input:focus{
+    border-color: #272727;
+    outline: #272727;
+    box-shadow: none;
+}
+.job-list form select:focus{
+    border-color: #272727;
+    outline: #272727;
+    box-shadow: none;
+}
+#myTab .nav-item .nav-link{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+#myTab .nav-item .nav-link{
+    color: #272727;
+    background-color: #03dbac;
+    margin-right: 8px;
+}
+#myTab .nav-item .nav-link.active{
+    color: white;
+    background-color: #02AA85;
+}
+#myTabContent>div{
+    padding: 20px 0px;
+}
+/*
+ Job List End
+=================================*/
+
+
+/*
+ CV Bank Start
+=================================*/
+.cv-bank{
+    width: 100%;
+    padding: 40px 80px;
+    background-color: #FBF9F9;
+    overflow-x: hidden;
+}
+.cv-bank .heading h2{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.cv-bank .heading h3{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding: 8px 0px;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+}
+.cv-bank .category .card{
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.cv-bank .category .card h4{
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.cv-bank .category .card h6{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.cv-bank .category .card .icon{
+    width: 50px;
+    height: 50px;
+    padding-top: 5px;
+    border: 1px solid #02AA85;
+    border-radius: 50%;
+}
+.cv-bank .category .card:hover .icon{
+    background-color: #02AA85;
+    transition: .6s ease-in-out;
+}
+.cv-bank .category .card:hover .icon i{
+    color: white;
+}
+.cv-bank .category .card .icon i{
+    color: #02AA85;
+    font-size: 25px;
+}
+.cv-bank .category .card button{
+    border-radius: 0px;
+}
+.hidden-div{
+    border-style: solid;
+    padding: 5px 0px 0px 0px;
+    color: white;
+    background-color: #272727;
+    border-radius: 5px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+.hidden-div button{
+    background-color: transparent;
+    border: none;
+    float: right;
+}
+.hidden-div .box{
+    border-style: none;
+    padding: 5px 15px;
+}
+.hidden-div .box h4{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600; 
+}
+.hidden-div .box h6{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; 
+}
+.hidden-div .box a{
+    text-decoration: none;
+    text-align: unset;
+    padding: 20px 10px;
+    margin-top: 15px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    border-style: none;
+    border-radius: 5px;
+    background: linear-gradient(to bottom right, #6600ff 0%, #ff99cc 100%);
+}
+.hidden-div .box a:hover{
+    margin-left: 8px;
+    transition: .6s;
+}
+.hidden-div .box a h6{
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+.hidden-div .box a span{
+    display: block;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.hidden-div .box a .icon i{
+    font-size: 30px;
+}
+.hidden-div a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 0px;
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    border-style: none;
+    border-radius: 0px;
+}
+/*
+ CV Bank End
+=================================*/
+
+
+/*
+ Office Address Start
+=================================*/
+.office-address{
+    width: 100%;
+    padding: 40px 80px;
+    background-color: white;
+    overflow-x: hidden;
+}
+.office-address h3{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.office-address ul li{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+/*
+ Office Address Start
+=================================*/
+
+
+
+/*
+    Footer Start
+=================================*/
+.footer{
+    width: 100%;
+    padding: 40px 80px;
+    background-color: #272727;
+    color: white;
+}
+.footer .logo{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.footer .logo img{
+    width: 100px;
+}
+.footer .heading{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.footer .heading h5{
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:  bold;
+}
+.footer  .sortDetails{
+    width: 90%;
+    color: #CFCFD1;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+}
+.footer .footer-link ul li{
+    margin-left: -28px;
+    margin-bottom: 10px; 
+}
+.footer .footer-link ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #CFCFD1;  
+}
+.footer .footer-link ul li a:hover{
+    color: white;
+    padding-left: 5px;
+    transition: .6s ease;
+}
+.footer .subscription{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer .subscription h4{
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.footer .subscription h6{
+   color: #CFCFD1;
+   font-size: 14px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+}
+.footer .subscription form input{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-color: #FC4501;
+    border-width: 1px;
+    border-radius: 0px;
+}
+.footer .subscription form input::placeholder{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.footer .subscription form input:focus{
+    border-color: #FC4501;
+    outline: #FC4501;
+    box-shadow: none;
+}
+.footer .subscription form button{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-style: solid;
+    border-color: #FC4501!important;
+    border-width: 1px;
+    border-radius: 0px;
+    background-color: #FC4501!important;
+    position: relative;
+    z-index: 1;
+}
+.footer .subscription form button::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    right: 0;
+    border-color: #272727;
+    background-color: #272727;
+    transition: .8s;
+    z-index: -1;
+}
+.footer .subscription form button:hover::before{
+    width: 100%;
+}
+/*.footer .subscription form button:hover{
+    background-color: transparent!important;
+    transition: .6s ease-in-out;
+}
+*/
+.footer .ex-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .ex-footer .copyright span{
+    color: #CFCFD1;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.footer .ex-footer .social-link .icon a{
+    color: #CFCFD1;
+    font-size: 14px;
+    text-decoration: none;
+}
+.footer .ex-footer .social-link .icon a i{
+    color: #CFCFD1;
+    margin-left: 20px;
+}
+.footer .ex-footer .social-link .icon a:hover i{
+    color: #FC4501;
+    transition: .6s ease-in-out;
+}
+.footer hr{
+    color: #6A6868;
+}
+/*
+    Footer End
+=================================*/
+
+
+
+/*=================================
+    Scroll Bottom To Top Start
+  =================================*/
+
+
+  #scroll-bottom-top{
+    opacity: 0;
+    position: fixed;
+    color: white;
+    background-color: #FC4501;
+    border: solid;
+    border-color: #FC4501;
+    border-radius: 50%;
+    bottom: 35px;
+    right: 35px;
+    width: 35px;
+    height: 35px;
+    transition: .7s ease;   
+}
+#scroll-bottom-top i{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#scroll-bottom-top:hover{
+    color: #FC4501;
+    border-color: #FC4501;
+    background-color: #272727;
+    transition: .6s ease-in-out;
+}
+/*=================================
+    Scroll Bottom To Top End
+  =================================*/
+
+
+
+
+  .sidebar{
+    padding: 30px 10px;
+    width: 20%;
+    border: 1px solid #eee;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+details{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+details>summary {
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+summary::after {
+  margin-left: 1ch;
+  display: inline-block;
+  transition: 0.5s;
+  content: '\203A'; /* chevron */
+}
+
+details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+		th {
+			text-align: center;
+			background-color: #6c757d;
+			color: #fff;
+		}
+</style>
+
+
+</head>
+<body>
+
+	<!-- ===========Header Start=========== -->
+	<div class="header">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="d-flex justify-content-between">
+					<div class="d-flex">
+						<div>
+							<a asp-action="Index" asp-controller="Home">Jobs</a>
+						</div>
+						<div>
+							<a href="#">My Jobs</a>
+						</div>
+						<div>
+							<a asp-action="Index" asp-controller="CompanyDashboard" class="active">Employers</a>
+						</div>
+					</div>
+					<div class="social-link">
+						<div class="d-flex">
+							<div>
+								<a href="#"><i class="bi bi-facebook"></i></a>
+							</div>
+							<div>
+								<a href="#"><i class="bi bi-google"></i></a>
+							</div>
+							<div>
+								<a href="#"><i class="bi bi-linkedin"></i></a>
+							</div>
+							<div>
+								<a href="#"><i class="bi bi-youtube"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ===========Header End=========== -->
+	<!-- ===========Navbar Start=========== -->
+	<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">
+				<img src="assets/img/tactsoftlogo.png" class="img-fluid" alt="">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<span>@User.Identity.Name</span>
+							<span class="icon">
+								<i class='fas fa-chevron-down'></i>
+							</span>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li>
+								<a class="dropdown-item" href="#"><i class="bi bi-currency-dollar"></i> Payment Status</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#"><i class="bi bi-pencil-square"></i> Edit Account</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#"><i class="bi bi-question-circle-fill"></i> Support</a>
+							</li>
+							</hr>
+							<li>
+								<a class="dropdown-item" href="#"><i class="bi bi-key"></i> Change Password</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#"><i class="bi bi-person-fill-gear"></i> User Management</a>
+							</li>
+							<hr>
+							<li>
+								<a class="dropdown-item" href="/Account/Logout"><i class="bi bi-box-arrow-right"></i> Sign Out</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- ===========Navbar End=========== -->
+	<!-- ===========Nav Pill Start=========== -->
+	<div class="d-flex justify-content-center" id="nav-pills">
+		<div class="row">
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a class="nav-link active" id="employersPanel" aria-current="page" href="#">Employer's Panel</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">CV Bank</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Candidate Communication</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Analytics</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Services for Employers</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ===========Nav Pill End=========== -->
+	<!-- ===========Search CV Bank & Post Job Button Start=========== -->
+	<div class="d-flex justify-content-end link-btn-area">
+		<div>
+			<a href="#" class="btn btn-secondary mx-3"><i class="bi bi-search"></i> Search CV Bank</a>
+		</div>
+		<div>
+			<a asp-action="Create" asp-controller="PostingJobs" class="btn btn-success"><i class="bi bi-plus-lg"></i> Post a New Job</a>
+		</div>
+	</div>
+	<!-- ===========Search CV Bank & Post Job Button End=========== -->
+	<!-- ============Job List Start============ -->
+	<div class="job-list">
+		<div class="row">
+			<div class="heading">
+				<h2><i class="bi bi-journal-text"></i> Job List</h2>
+			</div>
+			<div class="mt-4 mb-4">
+				<form action="">
+					<div class="row">
+						<div class="col-md-3 mb-3">
+							<div class="d-flex" role="search">
+								<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+								<button class="btn btn-success" type="submit"><i class="bi bi-search"></i></button>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="mb-3 row">
+								<label for="from-date" class="col-sm-2 col-form-label">From:</label>
+								<div class="col-sm-10">
+									<input type="date" class="form-control" id="from-date">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="mb-3 row">
+								<label for="to-date" class="col-sm-2 col-form-label">To:</label>
+								<div class="col-sm-10">
+									<input type="date" class="form-control" id="to-date">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="mb-3 row">
+								<label for="to-date" class="col-sm-5 col-form-label">Job Per Page:</label>
+								<div class="col-sm-7">
+									<select class="form-select" aria-label="Default select example">
+										<option selected>5</option>
+										<option value="10">10</option>
+										<option value="15">15</option>
+										<option value="20">20</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div>
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Posted <span>(@Model.CountOfJobs)</span></button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Draft <span>(0)</span></button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Archived <span>(0)</span></button>
+					</li>
+				</ul>
+			<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active"  id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+						
+							<style>
+								table {
+									border-collapse: collapse;
+									width: 100%;
+									text-align: left;
+								}
+
+								th, td {
+									padding: 8px;
+									text-align: left;
+									border-bottom: 1px solid #ddd;
+								}
+
+								th {
+								background-color: #00C7B2;
+								}
+
+								tr:hover {
+									background-color: #f5f5f5;
+								}
+							</style>
+							<br />
+						<h4 class=" text-center ">Posting Jobs</h4>
+						<br />
+							<table>
+								<thead>
+								<tr>
+									<th>Company Name</th>
+									<th>Job Tittle</th>
+									<th>Job Address</th>
+									<th>Publish on</th>
+									<th>Deadline</th>
+									
+									<th>Action</th>
+								</tr>
+								</thead>
+								<tbody>
+								@foreach (var item in Model.Companyjobs)
+								{
+									<tr>
+										<td>@item.CompanyName</td>
+										<td>
+											<a href="/Home/JobDetails/@item.Id"><p>@item.JobTittle</p></a>
+											</td>
+										<td>@item.JobAddress</td>
+										<td>@item.publishon.ToString("dd/MM/yyyy")</td>
+										<td>@item.ApplicationDeadline.ToString("dd/MM/yyyy")</td>
+										<td>
+											<a href="/PostingJobs/Edit/@item.Id"><p class=" btn btn-success">Edit</p></a>
+											<a href="/PostingJobs/DeleteConfirmed/@item.Id"><p class=" btn btn-danger" > Delete</p></a>
+										<td>
+									</tr>
+									
+								}
+
+								</tbody>
+							</table>
+					<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">Draft</div>
+					<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Archived</div>
+				</div>
+			</div>
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+						<table class="table table-bordered">
+							<thead class="bg-info">
+								<tr >
+									@*<th scope="col">js</th>*@
+									<th scope="col">JobseekerName</th>
+									<th scope="col">Email</th>
+									<th scope="col">JobTittle</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model.VmApplyingJobseekers)
+								{
+									<tr>
+										@*<td>
+											@item.CompanyName
+										</td>*@
+										<td>
+											@item.JobseekerName
+										</td>
+										<td>
+											@item.Email
+										</td>
+										<td>
+											@item.JobTittle
+										</td>
+										
+									</tr>
+								}
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+		</div>
+	</div>
+
+	
+
+	<!-- ============Job List End============ -->
+	<!-- ============CV Bank Start============ -->
+	<div class="cv-bank">
+		<div class="row">
+			<div class="heading mb-4">
+				<h2><i class="bi bi-file-earmark-person-fill"></i> CV Bank</h2>
+			</div>
+			<div class="col-md-6">
+				<div class="category">
+					<div class="heading mb-4">
+						<h3 class="mb-4"><i class="bi bi-file-earmark-spreadsheet"></i> Functioanl Category</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card">
+								<div class="mb-3 icon m-auto">
+									<i class="bi bi-calculator-fill"></i>
+								</div>
+								<h6>Account/ Finance</h6>
+								<h4>12,005</h4>
+								<button id="myButton" class="btn btn-success mt-3">Click</button>
+							</div>
+
+							<div id="myDiv" class="hidden-div" style="display: none;">
+								<button id="myCloseButton" class="btn btn-secondary"><i class="bi bi-x-circle-fill"></i></button>
+								<div class="box">
+									<div class="mt-2">
+										<h6>IT</h6>
+										<h4>12,005</h4>
+									</div>
+									<a href="#" class="d-block">
+										<div class="d-flex justify-content-around">
+											<div>
+												<h6>5,604</h6>
+												<span>Lorem, ipsum, dolor.</span>
+												<span>Lorem, ipsum, dolor.</span>
+											</div>
+											<div class="icon">
+												<i class="bi bi-calculator-fill"></i>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="d-block">
+										<div class="d-flex justify-content-around">
+											<div>
+												<h6>3,604</h6>
+												<span>Lorem, ipsum, dolor.</span>
+												<span>Lorem, ipsum, dolor.</span>
+											</div>
+											<div class="icon">
+												<i class="bi bi-calculator-fill"></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<a href="#" class="btn btn-success">Show cvs <i class="bi bi-chevron-right"></i></a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card">
+								<div class="mb-3 icon m-auto">
+									<i class="bi bi-calculator-fill"></i>
+								</div>
+								<h6>Education/ Training</h6>
+								<h4>12,005</h4>
+								<button id="myButton" class="btn btn-success mt-3">Click</button>
+							</div>
+
+							<div id="myDiv" class="hidden-div" style="display: none;">
+								<button id="myCloseButton" class="btn btn-secondary"><i class="bi bi-x-circle-fill"></i></button>
+								<div class="box">
+									<div class="mt-2">
+										<h6>Account/ Finance</h6>
+										<h4>12,005</h4>
+									</div>
+									<a href="#" class="d-block">
+										<div class="d-flex justify-content-around">
+											<div>
+												<h6>5,604</h6>
+												<span>Lorem, ipsum, dolor.</span>
+												<span>Lorem, ipsum, dolor.</span>
+											</div>
+											<div class="icon">
+												<i class="bi bi-calculator-fill"></i>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="d-block">
+										<div class="d-flex justify-content-around">
+											<div>
+												<h6>3,604</h6>
+												<span>Lorem, ipsum, dolor.</span>
+												<span>Lorem, ipsum, dolor.</span>
+											</div>
+											<div class="icon">
+												<i class="bi bi-calculator-fill"></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<a href="#" class="btn btn-success">Show cvs <i class="bi bi-chevron-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="category">
+					<div class="heading mb-4">
+						<h3 class="mb-4"><i class="bi bi-award"></i> Specialized Skilled</h3>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card">
+								<div class="mb-3 icon m-auto">
+									<i class="bi bi-calculator-fill"></i>
+								</div>
+								<h6>Account/ Finance</h6>
+								<h4>12,005</h4>
+								<button id="myButton" class="btn btn-success mt-3">Click</button>
+							</div>
+
+							<div id="myDiv" class="hidden-div" style="display: none;">
+								<button id="myCloseButton" class="btn btn-secondary"><i class="bi bi-x-circle-fill"></i></button>
+								<div class="box">
+									<div class="mt-2">
+										<h6>Account/ Finance</h6>
+										<h4>12,005</h4>
+									</div>
+									<a href="#" class="d-block">
+										<div class="d-flex justify-content-around">
+											<div>
+												<h6>5,604</h6>
+												<span>Lorem, ipsum, dolor.</span>
+												<span>Lorem, ipsum, dolor.</span>
+											</div>
+											<div class="icon">
+												<i class="bi bi-calculator-fill"></i>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="d-block">
+										<div class="d-flex justify-content-around">
+											<div>
+												<h6>3,604</h6>
+												<span>Lorem, ipsum, dolor.</span>
+												<span>Lorem, ipsum, dolor.</span>
+											</div>
+											<div class="icon">
+												<i class="bi bi-calculator-fill"></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<a href="#" class="btn btn-success">Show cvs <i class="bi bi-chevron-right"></i></a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card">
+								<div class="mb-3 icon m-auto">
+									<i class="bi bi-calculator-fill"></i>
+								</div>
+								<h6>Education/ Training</h6>
+								<h4>12,005</h4>
+								<button id="myButton" class="btn btn-success mt-3">Click</button>
+							</div>
+
+							<div id="myDiv" class="hidden-div" style="display: none;">
+								<button id="myCloseButton" class="btn btn-secondary"><i class="bi bi-x-circle-fill"></i></button>
+								<div class="box">
+									<div class="mt-2">
+										<h6>Account/ Finance</h6>
+										<h4>12,005</h4>
+									</div>
+									<a href="#" class="d-block">
+										<div class="d-flex justify-content-around">
+											<div>
+												<h6>5,604</h6>
+												<span>Lorem, ipsum, dolor.</span>
+												<span>Lorem, ipsum, dolor.</span>
+											</div>
+											<div class="icon">
+												<i class="bi bi-calculator-fill"></i>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="d-block">
+										<div class="d-flex justify-content-around">
+											<div>
+												<h6>3,604</h6>
+												<span>Lorem, ipsum, dolor.</span>
+												<span>Lorem, ipsum, dolor.</span>
+											</div>
+											<div class="icon">
+												<i class="bi bi-calculator-fill"></i>
+											</div>
+										</div>
+									</a>
+								</div>
+								<a href="#" class="btn btn-success">Show cvs <i class="bi bi-chevron-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ============CV Bank End============ -->
+	<!-- ============Address Start============ -->
+	<div class="office-address">
+		<div class="row">
+			<h3 class="mb-4">Office Address</h3>
+			<ul type="none">
+				<li>Tactsoft Limited</li>
+				<li>Dhaka, Bangladesh</li>
+				<li>Dhaka, Bangladesh</li>
+				<li>Dhaka, Bangladesh</li>
+				<li>Dhaka, Bangladesh</li>
+				<li>Dhaka, Bangladesh</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ============Address End============ -->
+	<!-- ============Footer Start============ -->
+	<footer class="footer">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="heading">
+					<div class="logo">
+						<a href="index.html">
+							<img src="assets/img/tactsoftlogo.png" class="img-fluid" alt="">
+						</a>
+					</div>
+				</div>
+				<p class="sortDetails">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Vero officia beatae quae tempora hic ducimus eius soluta, alias? Aperiam ducimus rerum, iusto! Dolore aliquam deserunt a tenetur voluptate ipsa facilis.</p>
+			</div>
+			<div class="col-md-3">
+				<div class="heading">
+					<h5>About</h5>
+				</div>
+				<div class="footer-link">
+					<ul type="none">
+						<li>
+							<a href="#">About us</a>
+						</li>
+						<li>
+							<a href="#">Login</a>
+						</li>
+						<li>
+							<a href="#">My Account</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>
+						<li>
+							<a href="#">Privacy Policy</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="heading">
+					<h5>For Companies</h5>
+				</div>
+				<div class="footer-link">
+					<ul type="none">
+						<li>
+							<a href="#">Browese Freelancers</a>
+						</li>
+						<li>
+							<a href="#">Post a Job</a>
+						</li>
+						<li>
+							<a href="#">Post a Project</a>
+						</li>
+						<li>
+							<a href="#">Pricing Plans</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="heading">
+					<h5>For Candidates</h5>
+				</div>
+				<div class="footer-link">
+					<ul type="none">
+						<li>
+							<a href="#">Browese Jobs</a>
+						</li>
+						<li>
+							<a href="#">Jobs Alerts</a>
+						</li>
+						<li>
+							<a href="#">Applied Jobs</a>
+						</li>
+						<li>
+							<a href="#">Bookmarks</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div class="subscription">
+				<div class="row">
+					<div class="col-md-7">
+						<h4>Subscribe to Newsletter</h4>
+						<h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, tempore!</h6>
+					</div>
+					<div class="col-md-5">
+						<form class="d-flex" role="search">
+							<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Email Address">
+							<button class="btn btn-danger" type="submit">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="ex-footer">
+				<div class="copyright">
+					<span>Copyright &copy; TACTSOFT LTD. 2023 | All Rights Reserved.</span>
+				</div>
+				<div class="social-link d-flex">
+					<div class="icon">
+						<a href="#"><i class="bi bi-facebook"></i></a>
+					</div>
+					<div class="icon">
+						<a href="#"><i class="bi bi-linkedin"></i></a>
+					</div>
+					<div class="icon">
+						<a href="#"><i class="bi bi-twitter"></i></a>
+					</div>
+					<div class="icon">
+						<a href="#"><i class="bi bi-pinterest"></i></a>
+					</div>
+					<div class="icon">
+						<a href="#"><i class="bi bi-google"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- ============Footer End============ -->
+	<!-- ===========Scroll Bottom To Top=========== -->
+	<button type="button" id="scroll-bottom-top" title="Go to Top">
+		<i class="bi bi-chevron-up"></i>
+	</button>
+	<!-- ===========Scroll Bottom To Top=========== -->
+	<!-- Bootstrap -->
+	<script src="assets/js/bootstrap.bundle.js"></script>
+	<!-- jQuery -->
+	<script src="assets/js/jquery.min.js"></script>
+	<!-- My Custom JS -->
+	<script src="assets/js/main.js"></script>
+		<!-- Linking Bootstrap JS and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script>
+		const button = document.getElementById("myButton");
+		const hiddenDiv = document.getElementById("myDiv");
+		const closeButton = document.getElementById("myCloseButton");
+
+		button.addEventListener("click", function() {
+			hiddenDiv.style.display = "block";
+		});
+
+		closeButton.addEventListener("click", function() {
+			hiddenDiv.style.display = "none";
+		});
+
+	</script>
+</body>
+</html>

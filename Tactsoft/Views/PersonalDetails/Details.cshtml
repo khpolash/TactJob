@@ -1,0 +1,81 @@
+﻿@model Tactsoft.Core.Entities.PersonalDetails
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+
+                  
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <dl class="row">
+                                <dt class="col-md-3">
+                                    @Html.DisplayNameFor(model => model.FirstName)
+                                </dt>
+                                <dd class="col-md-9">
+                                    @Html.DisplayFor(model => model.FirstName)
+                                </dd>
+                                <dt class="col-md-3">
+                                    @Html.DisplayNameFor(model => model.LastName)
+                                </dt>
+                                <dd class="col-md-9">
+                                    @Html.DisplayFor(model => model.LastName)
+                                </dd>
+
+                                <dt class="col-md-3">
+                                    @Html.DisplayNameFor(model => model.NationalId)
+                                </dt>
+                                <dd class="col-md-9">
+                                    @Html.DisplayFor(model => model.NationalId)
+                                </dd>
+
+                                <dt class="col-md-3">
+                                    @Html.DisplayNameFor(model => model.Religion)
+                                </dt>
+                                <dd class="col-md-9">
+                                    @Html.DisplayFor(model => model.Religion)
+                                </dd>
+
+                                <dt class="col-md-3">
+                                    @Html.DisplayNameFor(model => model.MotherName)
+                                </dt>
+                                <dd class="col-md-9">
+                                    @Html.DisplayFor(model => model.MotherName)
+                                </dd>
+                            </dl>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-end">
+
+                        <a class="btn btn-outline-danger btn-sm mr-2" asp-controller="JobSeekerDashboard" asp-action="Index">
+                            <i class="far fa-window-close"></i> Cancel
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

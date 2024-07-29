@@ -1,0 +1,357 @@
+@media only screen and (max-width: 991px) {
+    /*
+      Navbar Start
+    =================================*/
+     nav .navbar-nav{
+      margin-top: 20px;
+    }
+    nav .navbar-nav .nav-item{
+      padding: 0px 0px 0px 0px;
+    }
+    nav .navbar-nav .nav-item{
+      padding: 0px 0px 0px 0px;
+      border-bottom: 1px solid;
+      border-color: #FFD6C7;
+    }
+    nav .navbar-nav .dropdown .dropdown-menu{
+      margin-top: 0px;
+      border-radius: 4px;
+    }
+    nav .navbar-nav .dropdown .dropdown-menu .dropdown-item{
+      font-weight: 400;
+    }
+    nav .navbar-nav .nav-item .postJob{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    nav .navbar-nav .nav-item .postTask{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    nav .navbar-nav .nav-item .nav-link{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    nav .navbar-nav .nav-item .nav-link:hover{
+      border-bottom: none;
+    }
+    /*
+      Navbar End
+    =================================*/
+
+
+    /*
+      Banner Slider Start
+    =================================*/
+    #banner-carousel-slider{
+      width: 100%;
+      height: auto;
+    }
+    /*
+      Banner Slider End
+    =================================*/
+
+    /*
+    SignIn Start
+    =====================================*/
+    .signin-body .signin-body{
+        width: 60%;
+    }
+    /*
+    SignIn End
+    =====================================*/
+
+    /*
+    SignUp Start
+    =====================================*/
+    .signup-body .signup-body{
+        width: 60%;
+    }
+    /*
+    SignUp End
+    =====================================*/
+
+
+  }
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /*
+      Header Start
+    =================================*/
+    .header{
+      width: 100%;
+      padding: 0px;
+    }
+    .header .welcomeTxt {
+      display: none;
+    }
+    .header .language .dropdown a{
+      font-size: 12px;
+    }
+    .header .language .dropdown .dropdown-menu .dropdown-item{
+      font-size: 12px;
+    }
+    .header  .top-header-search{
+      display: block;
+    }
+    .header .profile .dropdown a{
+      font-size: 12px;
+    }
+    .header .profile .dropdown a img{
+      width: 25px;
+      height: 25px;
+    }
+    .header .profile .dropdown .dropdown-menu .dropdown-item{
+      font-size: 12px;
+    }
+    .header .message  .dropdown .dropdown-menu{
+      margin-left: -15px!important;
+    }
+    .header .notification  .dropdown .dropdown-menu{
+      margin-left: -15px!important;
+    }
+    /*
+      Header End
+    =================================*/
+
+
+    /*
+      Navbar Start
+    =================================*/
+    nav .navbar-nav{
+      margin-top: 20px;
+    }
+    nav .navbar-nav .nav-item{
+      padding: 0px 0px 0px 0px;
+    }
+    nav .navbar-nav .nav-item{
+      padding: 0px 0px 0px 0px;
+      border-bottom: 1px solid;
+      border-color: #FFD6C7;
+    }
+    nav .navbar-nav .dropdown .dropdown-menu{
+      margin-top: 0px;
+      border-radius: 4px;
+    }
+    nav .navbar-nav .dropdown .dropdown-menu .dropdown-item{
+      font-weight: 400;
+    }
+    nav .navbar-nav .nav-item .postJob{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    nav .navbar-nav .nav-item .postTask{
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    nav .navbar-nav .nav-item .nav-link{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    nav .navbar-nav .nav-item .nav-link:hover{
+      border-bottom: none;
+    }
+    /*
+      Navbar Start
+    =================================*/
+
+
+    /*
+      Search Area Start
+    =================================*/
+    .search-area{
+      width: 100%;
+      padding: 7% 5%;
+    }
+    .search-area form input{
+      margin-bottom: 10px;
+    }
+    .search-area form .searhBtn{
+      width: 100%;
+    }
+
+    /*
+      Search Area End
+    =================================*/
+
+
+    /*
+      Banner Slider Start
+    =================================*/
+    #banner-carousel-slider{
+      width: 100%;
+      height: auto;
+    }
+    #banner-carousel-slider .carousel-indicators button{
+      width: 6px;
+      height: 6px;
+    }
+    /*
+      Banner Slider End
+    =================================*/
+
+
+    /*
+    Job Vancancies Box Start
+    =================================*/
+    .job-vancancies {
+      width: 100%;
+      padding: 10% 5%;
+    }
+    /*
+    Job Vancancies Box End
+    =================================*/
+
+
+    /*
+      Job Category Start
+    =================================*/
+    .job-category{
+      width: 100%;
+      padding: 10% 5% 10% 5%;
+    }
+    .job-category .all-Category .card {
+      padding: 20px 10px 10px 10px;
+    }
+    /*
+      Job Category End
+    =================================*/
+
+
+    /*
+      Hot Jobs Start
+    =================================*/
+    .hot-jobs{
+      width: 100%;
+      padding: 10% 5% 10% 5%;
+    }
+    /*
+      Hot Jobs End
+    =================================*/
+
+
+    /*
+    Role Selection Start
+    =================================*/
+    .role-selection{
+      width: 100%;
+      padding: 10% 5% 10% 5%;
+    }
+    .role-selection .first-section{
+      padding: 10% 5% 10% 5%;
+    } 
+    .role-selection .second-section{
+      padding: 10% 5% 10% 5%;
+    }
+    /*
+    Role Selection End
+    =================================*/
+
+
+    /*
+    SignIn Start
+    =====================================*/
+    .signin-section .signin-body{
+        width: 90%;
+    }
+    /*
+    SignIn End
+    =====================================*/
+
+    /*
+    SignUp Start
+    =====================================*/
+    .signup-section .signup-body{
+        width: 90%;
+    }
+    /*
+    SignUp End
+    =====================================*/
+
+
+    /*
+      Profile Page Start
+    =================================*/
+    .profile-page{
+      width: 100%;
+      padding: 10% 5% 10% 5%;
+    }
+    .profile-page .side-nav{
+      padding: 10% 5% 10% 5%;
+      margin-bottom: 20px;
+    }
+    .profile-page .information-area{
+      padding: 10% 5% 10% 5%;
+    }
+    .profile-page .information-area .nav .nav-item .nav-link{
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+    /*
+      Profile Page End
+    =================================*/
+
+
+    /*
+      Browse Job Page Start
+    =================================*/
+    .browse-jobs{
+      width: 100%;
+      padding: 10% 0%;
+    }
+    /*
+      Browse Job Page End
+    =================================*/
+
+
+    /*
+      Job Details Page Start
+    =================================*/
+    .job-details{
+      width: 100%;
+      padding: 10% 5%;
+    }
+    /*
+      Job Details Page End
+    =================================*/
+
+
+    /*
+      Footer Start
+    =================================*/
+    .footer{
+      padding-top: 10%;
+      padding-right: 5%;
+      padding-bottom: 10%;
+      padding-left: 5%;
+    }
+    .footer .heading h5{
+      font-size: 18px;
+    }
+    .footer  .sortDetails{
+      width: 100%;
+    }
+    .footer .ex-footer{
+      display: block;
+    }
+    .footer .ex-footer .social-link {
+      margin-top: 15px;
+    }
+
+    /*
+      Footer End
+    =================================*/   
+  }
+
+
+
+
+  
+
+
+

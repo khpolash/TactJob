@@ -1,0 +1,1806 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*
+    Header Start
+=================================*/
+.header{
+    width: 100%;
+    padding: 0px 70px;
+    background-color: #FAFAFA;
+}
+.header .welcomeTxt {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: #EAEAEA;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.header .welcomeTxt span{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #6A6868;
+}
+.header .language {
+    border-right: 1px solid;
+    border-color: #EAEAEA;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.header .language .dropdown a{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #6A6868;
+    text-decoration: none;
+}
+.header .language .dropdown a:hover{
+    color: #FC4501!important;
+}
+.header .language .dropdown .dropdown-menu{
+    border-style: none;
+    border-radius: 0px;
+    padding: 0px;
+    margin-top: 12px!important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header .language .dropdown .dropdown-menu .dropdown-item{
+   font-size: 14px!important;
+   font-family: 'Roboto', sans-serif!important;
+   font-weight: 400;
+   color: #272727;
+   padding: 8px 12px;
+}
+.header .language .dropdown .dropdown-menu .dropdown-item:hover{
+    color: #FC4501!important;
+    border-left: 2px solid #FC4501;
+    background-color: #E7E7E7!important;
+}
+.header  .top-header-search{
+    border-right: 1px solid;
+    border-color: #EAEAEA;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.header  .top-header-search a i{
+    font-size: 14px;
+}
+.header  .top-header-search a i:hover{
+    color: #FC4501;
+}
+.header  .top-header-search{
+    display: none;
+}
+.header .profile {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: #EAEAEA;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.header .profile .dropdown a{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #6A6868;
+    text-decoration: none;
+}
+.header .profile .dropdown a:hover{
+    color: #FC4501!important;
+}
+.header .profile .dropdown .dropdown-menu{
+    border-style: none;
+    border-radius: 0px;
+    padding: 0px;
+    margin-top: 10px!important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header .profile .dropdown .dropdown-menu .dropdown-item{
+   font-size: 14px!important;
+   font-family: 'Roboto', sans-serif!important;
+   font-weight: 400;
+   color: #272727;
+   padding: 8px 12px;
+}
+.header .profile .dropdown .dropdown-menu .dropdown-item:hover{
+    color: #FC4501;
+    border-left: 2px solid #FC4501;
+    background-color: #E7E7E7!important;
+}
+.header .profile .dropdown a img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.header .profile .dropdown a span{
+    padding-left: 5px;
+}
+/*--Message Start--*/
+.header .message {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: #EAEAEA;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.header .message  .dropdown a .msgIcon {
+    font-size: 14px;
+    color: #6A6868;
+}
+.header .message  .dropdown a .msgIcon:hover{
+    color: #FC4501;
+    transition: .6s;
+}
+.header .message  .dropdown a .noti{
+    margin-top: 5px;
+    color: #FC4501!important;
+    background-color: #FC4501!important;
+}
+.header .message  .dropdown .dropdown-menu{
+    padding-bottom: 0px!important;
+    border-style: none;
+    border-radius: 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header .message  .dropdown .dropdown-menu .dropdown-item{
+ padding-top: 15px;
+ padding-bottom: 10px;  
+}
+.header .message  .dropdown .dropdown-menu .dropdown-item:hover{
+    background-color: transparent;
+}
+.header .message  .dropdown .dropdown-menu .dropdown-item .icon i{
+    color: #6A6868;
+    font-size: 20px;
+    padding: 6px 10px;
+    background-color: #F1F1F1;
+    border-radius: 50%;
+}
+.header .message  .dropdown .dropdown-menu .dropdown-item .name{
+    color: #272727;
+    font-size: 14px!important;
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 400;
+    padding-left: 10px;
+    line-height: 12px;
+    cursor: pointer;
+}
+.header .message  .dropdown .dropdown-menu .dropdown-item .name:hover{
+    color: #FC4501;
+}
+.header .message  .dropdown .dropdown-menu .dropdown-item .msgTime{
+    color: #6A6868;
+    font-size: 11px!important;
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 600;
+    padding-left: 50px!important;
+    line-height: 12px;
+}
+.header .message  .dropdown .dropdown-menu hr{
+    padding: 0px;
+    margin: 0px;
+}
+.header .message  .dropdown .dropdown-menu .dropdown-item .msgDetails{
+    color: #6A6868;
+    font-size: 13px!important;
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.header .message  .dropdown .dropdown-menu .viewMsgBtn{
+    color: white;
+    padding: 15px 0px;
+    font-size: 14px!important;
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #272727;
+}
+.header .message  .dropdown .dropdown-menu .viewMsgBtn:hover{
+    color: white;
+    background-color: #FC4501;
+    transition: .6s ease-in-out;
+}
+/*--Message End--*/
+
+/*--Notification Start--*/
+.header .notification {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: #EAEAEA;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.header .notification  .dropdown a .notiIcon {
+    font-size: 14px;
+    color: #6A6868;
+}
+.header .notification  .dropdown a .notiIcon:hover{
+    color: #FC4501;
+    transition: .6s;
+}
+.header .notification  .dropdown a .noti{
+    margin-top: 5px;
+    color: #FC4501!important;
+    background-color: #FC4501!important;
+}
+.header .notification  .dropdown .dropdown-menu{
+    padding-bottom: 0px!important;
+    border-style: none;
+    border-radius: 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item{
+ padding-top: 15px;
+ padding-bottom: 10px;
+
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item:hover{
+    background-color: transparent;
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item .user-photo img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item .icon i{
+    color: #6A6868;
+    font-size: 20px;
+    padding: 6px 10px;
+    background-color: #F1F1F1;
+    border-radius: 50%;
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item .name{
+    font-size: 14px!important;
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 400;
+    padding-left: 10px;
+    line-height: 10px;
+    cursor: pointer;
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item .name:hover{
+    color: #FC4501;
+}
+.header .notification  .dropdown .dropdown-menu hr{
+    padding: 0px;
+    margin: 0px;
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item .jobPosition{
+    color: #6A6868;
+    font-size: 13px!important;
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item .jobPosition span{
+    color: #FC4501;
+}
+.header .notification  .dropdown .dropdown-menu .dropdown-item .jobPosition span:hover{
+    color: #272727;
+}
+.header .notification  .dropdown .dropdown-menu .viewNotiBtn{
+    color: white;
+    padding: 15px 0px;
+    font-size: 14px!important;
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #272727;
+}
+.header .notification  .dropdown .dropdown-menu .viewNotiBtn:hover{
+    color: white;
+    background-color: #FC4501;
+    transition: .6s ease-in-out;
+}
+/*--Notification End--*/
+
+/*--Account Start--*/
+.header .account {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-color: #EAEAEA;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.header .account .dropdown a{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #6A6868;
+    text-decoration: none;
+}
+.header .account .dropdown a:hover{
+    color: #FC4501!important;
+}
+.header .account .dropdown .dropdown-menu{
+    border-style: none;
+    border-radius: 0px;
+    padding: 20px 10px 20px 0px;
+    margin-top: 10px!important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header .account .dropdown .dropdown-menu a{
+   font-size: 14px!important;
+   font-family: 'Roboto', sans-serif!important;
+   font-weight: 400;
+   color: #272727;
+
+}
+.header .account .dropdown .dropdown-menu .signIn-btn{
+      font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    border-style: none;
+    border-radius: 4px;
+    background-color: #FC4501;
+}
+.header .account .dropdown .dropdown-menu .signIn-btn:hover{
+    color: white!important;
+    background-color: #C63904;
+    transition: .6s ease;
+}
+.header .account .dropdown .dropdown-menu .signUp-btn{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    border-style: none;
+    border-radius: 4px;
+    background-color: #272727;
+}
+.header .account .dropdown .dropdown-menu .signUp-btn:hover{
+    color: white!important;
+    background-color: #3E3E3E;
+    transition: .6s ease;
+}
+/*--Account End--*/
+/*
+    Header End
+=================================*/
+
+
+
+/*
+    Navbar Start
+=================================*/
+/*--Sticky Navbar Start--*/
+.sticky-nav{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
+    animation: stickyNav-slide-down .7s ease;
+}
+@keyframes stickyNav-slide-down{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+/*--Sticky Navbar End--*/
+nav .navbar-brand{
+    width: 130px;
+}
+nav .navbar-nav .nav-item .nav-link{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #272727;
+    padding: 10px 15px;
+}
+nav .navbar-nav .nav-item .nav-link:hover{
+    color: #FC4501;
+    transition: .6s;
+}
+nav .navbar-nav .nav-item .nav-link.active{
+    color: #FC4501;
+}
+nav .navbar-nav .nav-item .nav-link .bi-search{
+   -webkit-text-stroke: 1px;
+}
+nav .navbar-nav .dropdown .dropdown-menu{
+   border-style: none;
+   border-radius: 0px;
+   padding: 0px;
+   margin-top: 8px!important;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+nav .navbar-nav .dropdown .dropdown-menu .dropdown-item{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #272727;
+    padding: 8px 40px 8px 20px;
+}
+nav .navbar-nav .dropdown .dropdown-menu .dropdown-item:hover{
+    color: #FC4501;
+    border-left: 2px solid #FC4501;
+    background-color: #E7E7E7!important;
+    transition: .6s ease;
+}
+nav .navbar-nav .dropdown .nav-link .icon i{
+    font-size: 12px;
+    padding-left: 2px;
+}
+nav .navbar-nav .dropdown .nav-link[aria-expanded="true"] .icon i{
+  transition: .5s;
+  transform: rotate(180deg);
+}
+@keyframes slide-down{
+    0%{
+        opacity: 0;
+        transform: translateY(-14px);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+nav .navbar-nav .nav-item .postJob{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    border-style: none;
+    border-radius: 4px;
+    background-color: #FC4501;
+}
+nav .navbar-nav .nav-item .postJob:hover{
+    color: white;
+    background-color: #C63904;
+    transition: .6s ease;
+}
+nav .navbar-nav .nav-item .postTask{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    border-style: none;
+    border-radius: 4px;
+    background-color: #272727;
+}
+nav .navbar-nav .nav-item .postTask:hover{
+    color: white;
+    background-color: #3E3E3E;
+    transition: .6s ease;
+}
+#searchModal .modal-body form button{
+    border-color: #FC4501!important;
+    color: #FC4501!important;
+}
+#searchModal .modal-body form input:focus{
+    border-color: #FC4501;
+    outline: #FC4501;
+    box-shadow: none;
+}
+#searchModal .modal-body form button:hover{
+    background-color: #FC4501!important;
+    color: white!important;
+}
+/*
+    Navbar End
+=================================*/
+
+
+
+/*
+    Search Area Start
+=================================*/
+.search-area{
+    width: 100%;
+    padding: 20px 50px;
+    background-color: #FC4501;
+    text-align: center;
+    overflow-x: hidden;
+}
+.search-area form input{
+    color: #6A6868!important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    border-style: none;
+    border-radius: 2px;
+}
+.search-area form .searhBtn{
+    width: 80%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    border-radius: 2px;
+}
+.search-area form .searhBtn:hover{
+    color: #FC4501;
+    background-color: white;
+    transition: .6s ease;
+}
+.search-area form input:focus{
+    border-color: none;
+    outline: none;
+    box-shadow: none;
+}
+.search-area form input::placeholder{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+/*
+    Search Area End
+=================================*/
+
+
+/*
+    Banner Slider Start
+=================================*/
+#banner-carousel-slider{
+    width: 100%;
+    height: 60vh;
+}
+#banner-carousel-slider .carousel-inner{
+    width: 100%;
+    height: 100%!important;
+}
+#banner-carousel-slider .carousel-inner .carousel-item{
+    width: 100%;
+    height: 100%!important;
+}
+#banner-carousel-slider .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#banner-carousel-slider .carousel-indicators button.active{
+    background-color: #FC4501;
+}
+/*
+    Banner Slider End
+=================================*/
+
+
+/*
+    Job Vancancies Box Start
+=================================*/
+.job-vancancies {
+    width: 100%;
+    padding: 50px 50px;
+    overflow-x: hidden;
+}
+.job-vancancies a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.job-vancancies a .card {
+    width: 100%;
+    margin-top: 10px;
+    padding: 40px 10px 10px 20px;
+    text-align: center;
+    border: solid;
+    border-width: 1px;
+    border-color: #FFD3C2;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.job-vancancies a .card:hover{
+    border-color: white;
+    transition: .6s ease-in;
+}
+.job-vancancies a .card .icon{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    padding-top: 5px;
+    border-style: solid;
+    border-color: #FC4501;
+    border-width: 1px;
+    border-radius: 50%;
+}
+.job-vancancies a .card .icon i{
+    font-size: 26px;
+    color: #FC4501;
+}
+.job-vancancies a:hover .icon{
+    background-color: #272727;
+    transition: .6s ease-in-out;
+}
+.job-vancancies a .card h4{
+    color: #6A6868;
+    padding: 0;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.job-vancancies a .card h2{
+    color: #272727;
+    font-size: 22px;
+    font-weight: 600;
+}
+/*
+    Job Vancancies Box End
+=================================*/
+
+
+/*
+    Job Category Start
+=================================*/
+.job-category{
+    width: 100%;
+    padding: 50px 20px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+.job-category .heading{
+    width: 100%;
+    text-align: center;
+}
+.job-category .heading .title h4{
+    color: #272727;
+    font-size: 24px;
+    font-weight: 700;
+}
+.job-category .heading .sub-title h6{
+    color: #6A6868;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.job-category .heading .line{
+    border-style: none;
+    width: 80px;
+    margin: auto;
+    height: 2px;
+    background-color: #FC4501;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 100px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+.job-category .all-Category a{
+    display: block;
+    text-decoration: none;
+}
+.job-category .all-Category a:hover h6{
+    color: #FC4501;
+}
+.job-category .all-Category .card {
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+    border-radius: 0px;
+}
+.job-category .all-Category .card .icon{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    padding: 10px 10px;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    border-radius: 50%;
+    background-color: white;
+}
+.job-category .all-Category .card .icon img{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.job-category .all-Category a:hover .icon{
+    background-color: #272727;
+    transition: .6s ease-in-out;
+}
+.job-category .all-Category .card .categoryName h4{
+    color: #272727;
+    font-size: 12px;
+    font-weight: 600;
+}
+.job-category .all-Category .card  h6{
+    color: #6A6868;
+    font-size: 12px;
+    font-weight: 400;
+}
+/*
+    Job Category End
+=================================*/
+
+
+/*
+    Hot Jobs Start
+=================================*/
+.hot-jobs{
+    width: 100%;
+    padding: 50px 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FBF9F9;
+    overflow-x: hidden;
+}
+.hot-jobs .heading{
+    width: 100%;
+    text-align: center;
+}
+.hot-jobs .heading .title h4{
+    color: #272727;
+    font-size: 24px;
+    font-weight: 700;
+}
+.hot-jobs .heading .title h4 i{
+    color: #FC4501;
+}
+.hot-jobs .heading .sub-title h6{
+    color: #6A6868;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.hot-jobs .heading .line{
+    border-style: none;
+    width: 80px;
+    margin: auto;
+    height: 2px;
+    background-color: #FC4501;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 100px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+.hot-jobs  .job-box {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    padding: 20px 10px;
+    background-color: white;
+}
+.hot-jobs  .job-box  .company-logo{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.hot-jobs  .job-box:hover .company-logo{
+    transition: .6s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.hot-jobs  .job-box  .company-logo img{
+    width: 100%;
+    height: 100%;
+}
+.hot-jobs  .job-box  .company-name{
+    color: #272727;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.hot-jobs  .job-box  .job-position{
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.hot-jobs  .job-box  .job-position:hover{
+    color: #272727;
+}
+/*
+    Hot Jobs End
+=================================*/
+
+/*
+    Role Selection Start
+=================================*/
+.role-selection{
+    width: 100%;
+    padding: 50px 50px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+.role-selection .first-section{
+    text-align: center;
+}
+.role-selection .first-section .img{
+    width: 100%;
+    text-align: center;
+}
+.role-selection .first-section .img img{
+    width: 150px;
+    height: 200px;
+}
+.role-selection .first-section h2{
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.role-selection .first-section p{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.role-selection .second-section{
+ background-color: #FBF9F9;
+ padding: 30px 40px 30px 40px;
+}
+.role-selection .second-section  #job-role-slider{
+    padding: 10px 10px;
+}
+.role-selection .second-section  #job-role-slider .job-box{
+
+}
+.role-selection .second-section a{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+.role-selection .second-section a:hover .job-box h4{
+    color: #FC4501!important;
+    transition: .6s;
+}
+.role-selection .second-section a .job-box{
+    margin-right: 2px;
+    padding: 20px 10px 20px 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    background-color: white;
+}
+.role-selection .second-section a:hover .job-box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .6s;
+}
+.role-selection .second-section a .job-box h4{
+    color: #272727!important;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.role-selection .second-section a .job-box h6{
+ color: #6A6868!important;
+ font-size: 14px;
+ font-family: 'Roboto', sans-serif;
+ font-weight: 400;
+}
+.role-selection .second-section  #job-role-slider .slick-arrow::before{
+    color: #FC4501;
+}
+.role-selection .second-section  #job-role-slider .slick-dots li.slick-active button:before{
+ color: #FC4501!important;
+}
+/*
+    Role Selection End
+=================================*/
+
+
+/*
+SignIn Start
+=====================================*/
+.signin-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 0px;
+    overflow-x: hidden;
+}
+.signin-section .signin-body{
+    width: 30%;
+    margin: auto;
+    padding: 20px 20px;
+    border-style: solid;
+    border-color: #DBD6D6;
+    border-width: 1px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.signin-section .signin-body .svg-img{
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+.signin-section .signin-body .svg-img img{
+    width: 130px;
+    height: 90px;
+}
+.signin-section .signin-body h4{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.signin-section .signin-body p{
+    color: #6A6868;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.signin-section .signin-body form input:focus{
+    border-color: #272727;
+    outline: #272727;
+    box-shadow: none;
+}
+.signin-section .signin-body form .forgotten a{
+    text-decoration: none;
+    color: #6A6868;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.signin-section .signin-body form .forgotten a:hover{
+    text-decoration: underline;
+}
+.signin-section .signin-body form .create-account a{
+    text-decoration: none;
+    color: #6A6868;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.signin-section .signin-body form .create-account a:hover{
+    text-decoration: underline;
+}
+.signin-section .signin-body form .form-check input:checked {
+    border-color: #FC4501;
+    background-color:#FC4501;
+}
+.signin-section .signin-body form .signIn-btn{
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: auto;
+    background-color: #FC4501;
+    border-style: solid;
+    border-color: #FC4501;
+    border-radius: 4px;
+}
+.signin-section .signin-body form .signIn-btn:hover{
+    background-color: #272727;
+    border-color:  #272727;
+    transition: .6s ease-in-out;
+}
+/*
+SignIn End
+=====================================*/
+
+
+/*
+SignUp Start
+=====================================*/
+.signup-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 40px 0px;
+    overflow-x: hidden;
+}
+.signup-section .signup-body{
+    width: 70%;
+    margin: auto;
+    padding: 20px 20px;
+    border-style: solid;
+    border-color: #DBD6D6;
+    border-width: 1px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.signup-section .signup-body .svg-img{
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+.signup-section .signup-body .svg-img img{
+    width: 130px;
+    height: 90px;
+}
+.signup-section .signup-body h4{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.signup-section .signup-body p{
+    color: #6A6868;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.signup-section .signup-body form input:focus{
+    border-color: #272727;
+    outline: #272727;
+    box-shadow: none;
+}
+.signup-section .signup-body form .form-check input:checked {
+    border-color: #272727;
+    background-color:#272727;
+}
+.signup-section .signup-body form input,label{
+    color: #272727;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.signup-section .signup-body form .signUp-btn{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: auto;
+    background-color: #272727;
+    border-style: solid;
+    border-color: #272727;
+    border-radius: 4px;
+}
+.signup-section .signup-body form .signUp-btn:hover{
+    background-color: #FC4501;
+    border-color:  #FC4501;
+    transition: .6s ease-in-out;
+}
+/*
+    SignUp End
+=====================================*/
+
+
+/*
+    Profile Page Start
+=================================*/
+.profile-page{
+    width: 100%;
+    padding: 50px 20px;
+}
+.profile-page .side-nav {
+    width: 100%;
+    background-color: white;
+    padding: 15px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow-x: hidden;
+}
+.profile-page .side-nav a {
+    font-size: 14px !important;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 400;
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #272727;
+    display: block;
+}
+.profile-page .side-nav a:hover {
+    color: #FC4501;
+    border-left: 2px solid #FC4501;
+    background-color: #E7E7E7!important;
+    transition: .6s;
+}
+.profile-page .side-nav .dropdown-btn {
+    width: 100%;
+    font-size: 14px !important;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 400;
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #272727;
+    display: block;
+    background-color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+/*
+.profile-page .dropdown-btn.active{
+    color: #FC4501;
+}
+*/
+.profile-page .side-nav .dropdown-container {
+    display: none;
+    background-color: white;
+}
+.profile-page .side-nav .dropdown-container a{
+    color: #272727!important;
+}
+.profile-page .side-nav .dropdown-container a i{
+    font-size: 14px!important;
+    color: #272727;
+}
+.profile-page .side-nav .fa-chevron-down {
+    float: right;
+    padding-right: 8px;
+}
+.profile-page .side-nav button[aria-expanded="true"] i{
+    transition: .5s;
+    transform: rotate(180deg);
+}
+.profile-page .side-nav .dropdown-container a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+.profile-page .side-nav .dropdown-container a:hover{
+    background-color: #E7E7E7!important;
+}
+.profile-page .side-nav  hr{
+    color: #E7E7E7;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+.profile-page .information-area{
+    width: 100%;
+    background-color: white;
+    padding: 15px 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 4px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow-x: hidden;
+}
+.profile-page .information-area .nav .nav-item .nav-link{
+    color: #272727;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 600;
+    border-style: 3px solid #FC4501!important;
+    border-radius: 4px;
+    background-color: #F7F7F7;
+}
+.profile-page .information-area .nav .nav-item .nav-link i{
+    display: block;
+    font-size: 20px;
+    padding-right: 8px;
+}
+.profile-page .information-area .nav .nav-item .nav-link:hover{
+    color: #FC4501;
+}
+.profile-page .information-area .nav .nav-item .nav-link.active{
+    color: white;
+    background-color: #272727!important;
+    border-bottom: 3px solid #FC4501;
+    border-radius: 4px;
+}
+.profile-page .information-area .tab-content h4{
+    font-size: 20px;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 600;
+    padding: 15px 0px;
+}
+.profile-page .information-area .tab-content form h5{
+    font-size: 16px;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 600;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.profile-page .information-area .tab-content form input:focus{
+    border-color: #272727;
+    outline: #272727;
+    box-shadow: none;
+}
+.profile-page .information-area .tab-content form textarea:focus{
+    border-color: #272727;
+    outline: #272727;
+    box-shadow: none;
+}
+.profile-page .information-area .tab-content form select:focus{
+    border-color: #272727;
+    outline: #272727;
+    box-shadow: none;
+}
+.profile-page .information-area .tab-content form select option{
+    font-size: 14px;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 400;
+}
+
+.profile-page .information-area .tab-content form input,label{
+    color: #272727;
+    font-size: 14px;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 400;
+}
+.profile-page .information-area .tab-content form .form-check input:checked {
+    border-color: #272727;
+    background-color:#272727;
+}
+.profile-page .information-area .tab-content form  .imgPreview-area{
+    width: 100%;
+    height: 200px;
+    float: right;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CFCFCF;
+    position: relative;
+}
+.profile-page .information-area .tab-content form  .imgPreview-area span{
+    color: #8E8E8E;
+    font-size: 16px;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 600;
+}
+.profile-page .information-area .tab-content form  .imgPreview-area .preview-iamge{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-color: #CFCFCF;
+    border-width: 1px;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+}
+.profile-page .information-area .tab-content form hr{
+    margin: 35px 0px 15px 0px;
+    color: #D6D6D6;
+}
+.profile-page .information-area .tab-content form button{
+    color: white;
+    float: right;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-family: 'Roboto', sans: serif !important;
+    font-weight: 400;
+    border: 1px solid #272727;
+    background-color: #272727;
+}
+.profile-page .information-area .tab-content form button:hover{
+   border: 1px solid #FC4501;
+   background-color: #FC4501;
+   transition: .6s ease-in-out;
+}
+/*
+    Profile Page End
+=================================*/
+
+
+/*
+    Browse Job Page Start
+=================================*/
+.browse-jobs{
+    padding: 60px 40px;
+}
+.browse-jobs .job-category-list{
+    width: 100%;
+    margin: auto;
+    padding: 20px 20px 10px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 4px;
+    overflow-x: hidden;
+}
+.browse-jobs .job-category-list a{
+    text-decoration: none;  
+}
+.browse-jobs .job-category-list a .jobs-card{
+    width: 100%;
+    padding: 20px 20px;
+    font-family: 'Roboto', sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.browse-jobs .job-category-list a .jobs-card:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: .6s;
+}
+.browse-jobs .job-category-list a .job-title{
+    color: #FC4501;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.browse-jobs .job-category-list a .job-title:hover{
+    text-decoration: underline;
+}
+.browse-jobs .job-category-list a .company-name{
+    color: #272727;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.browse-jobs .job-category-list a .location{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0px;
+    margin-top: 12px;
+}
+.browse-jobs .job-category-list a .location .icon{
+    padding-right: 10px;
+} 
+.browse-jobs .job-category-list a .education{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.browse-jobs .job-category-list a .education .icon{
+    padding-right: 10px;
+}
+.browse-jobs .job-category-list a .exp{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.browse-jobs .job-category-list a .exp .icon{
+    padding-right: 10px;
+}
+.browse-jobs .job-category-list a .dead-line{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+.browse-jobs .job-category-list a .dead-line .icon{
+    padding-right: 10px;
+}
+.browse-jobs a .jobs-card .company-logo{
+    width: 50px;
+    height: 50px;
+    float: right;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.browse-jobs a .jobs-card:hover .company-logo{
+    transition: .6s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.browse-jobs a .jobs-card .company-logo img{
+    width: 100%;
+    height: 100%;
+}
+/*
+    Browse Job Page End
+=================================*/
+
+
+/*
+    Job Details Page Start
+=================================*/
+.job-details{
+    padding: 60px 40px;
+}
+.job-details .job-details-box{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    padding: 30px 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 4px;
+    overflow-x: hidden;
+}
+.job-details .job-details-box span{
+    font-weight: 400;
+}
+.job-details .job-details-box .job-title{
+    color: #FC4501;
+    font-size: 18px;
+    font-weight: 600;
+}
+.job-details .job-details-box .company-name{
+    color: #272727;
+    font-size: 16px;
+    font-weight: 600;
+}
+.job-details .job-details-box .all-jobs{
+    color: #6A6868;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.job-details .job-details-box .all-jobs:hover{
+    color: #FC4501;
+    transition: .6s;
+}
+.job-details .job-details-box h5{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+.job-details .job-details-box p{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.job-details .job-details-box ul li{
+    color: #6A6868;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.job-details .job-details-box .line{
+    border-style: none;
+    width: 80px;
+    margin: auto;
+    height: 2px;
+    background-color: #FC4501;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate{
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 100px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+.job-details .job-details-box .apply-procedure{
+    width: 100%;
+    text-align: center;
+}
+.job-details .job-details-box .apply-procedure button{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 40px;
+    border-style: solid;
+    border-color: #FC4501;
+    border-width: 1px;
+    border-radius: 4px;
+    background: #FC4501;
+}
+.job-details .job-details-box .apply-procedure button:hover{
+    color: white;
+    border-color: #272727;
+    background-color: #272727;
+    transition: .6s ease-in-out;
+}
+.job-details .job-details-box .summery-box{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E7E7E7;
+    border-radius: 4px;
+}
+.job-details .job-details-box .summery-box .box-title{
+    color: white;
+    padding: 10px 0px 10px 10px;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #272727;
+}
+.job-details .job-details-box .summery-box h5{
+    margin-bottom: 15px;
+}
+.job-details .job-details-box .summery-box span{
+    font-weight: 400;
+}
+/*
+    Job Details Page End
+=================================*/
+
+
+
+
+
+
+
+
+
+/*
+    Footer Start
+=================================*/
+.footer{
+    width: 100%;
+    padding: 40px 80px;
+    background-color: #272727;
+    color: white;
+}
+.footer .logo{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.footer .logo img{
+    width: 100px;
+}
+.footer .heading{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.footer .heading h5{
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:  bold;
+}
+.footer  .sortDetails{
+    width: 90%;
+    color: #CFCFD1;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+}
+.footer .footer-link ul li{
+    margin-left: -28px;
+    margin-bottom: 10px; 
+}
+.footer .footer-link ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #CFCFD1;  
+}
+.footer .footer-link ul li a:hover{
+    color: white;
+    padding-left: 5px;
+    transition: .6s ease;
+}
+.footer .subscription{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer .subscription h4{
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.footer .subscription h6{
+ color: #CFCFD1;
+ font-size: 14px;
+ font-family: 'Roboto', sans-serif;
+ font-weight: 400;
+}
+.footer .subscription form input{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-color: #FC4501;
+    border-width: 1px;
+    border-radius: 0px;
+}
+.footer .subscription form input::placeholder{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.footer .subscription form input:focus{
+    border-color: #FC4501;
+    outline: #FC4501;
+    box-shadow: none;
+}
+.footer .subscription form button{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-style: solid;
+    border-color: #FC4501!important;
+    border-width: 1px;
+    border-radius: 0px;
+    background-color: #FC4501!important;
+    position: relative;
+    z-index: 1;
+}
+.footer .subscription form button::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    right: 0;
+    border-color: #272727;
+    background-color: #272727;
+    transition: .8s;
+    z-index: -1;
+}
+.footer .subscription form button:hover::before{
+    width: 100%;
+}
+/*.footer .subscription form button:hover{
+    background-color: transparent!important;
+    transition: .6s ease-in-out;
+}
+*/
+.footer .ex-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .ex-footer .copyright span{
+    color: #CFCFD1;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.footer .ex-footer .social-link .icon a{
+    color: #CFCFD1;
+    font-size: 14px;
+    text-decoration: none;
+}
+.footer .ex-footer .social-link .icon a i{
+    color: #CFCFD1;
+    margin-left: 20px;
+}
+.footer .ex-footer .social-link .icon a:hover i{
+    color: #FC4501;
+    transition: .6s ease-in-out;
+}
+.footer hr{
+    color: #6A6868;
+}
+/*
+    Footer End
+=================================*/
+
+
+
+/*=================================
+    Scroll Bottom To Top Start
+  =================================*/
+  #scroll-bottom-top{
+    opacity: 0;
+    position: fixed;
+    color: white;
+    background-color: #FC4501;
+    border: solid;
+    border-color: #FC4501;
+    border-radius: 50%;
+    bottom: 35px;
+    right: 35px;
+    width: 35px;
+    height: 35px;
+    transition: .7s ease;   
+}
+#scroll-bottom-top i{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#scroll-bottom-top:hover{
+    color: #FC4501;
+    border-color: #FC4501;
+    background-color: #272727;
+    transition: .6s ease-in-out;
+}
+/*=================================
+    Scroll Bottom To Top End
+  =================================*/
+
+
+
+
+  .sidebar{
+    padding: 30px 10px;
+    width: 20%;
+    border: 1px solid #eee;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+details{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+details>summary {
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+summary::after {
+  margin-left: 1ch;
+  display: inline-block;
+  transition: 0.5s;
+  content: '\203A'; /* chevron */
+}
+
+details[open] summary::after {
+  transform: rotate(90deg);
+}

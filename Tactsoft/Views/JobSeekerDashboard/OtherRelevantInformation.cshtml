@@ -1,0 +1,48 @@
+﻿@model Tactsoft.Core.Entities.OtherRelevantInformation
+
+<form asp-action="Create" asp-controller="OtherRelevantInformation" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Career Summary</label>
+                    <div class="col-md-9">
+                        <textarea rows="4" asp-for="CareerSummary" class="form-control"></textarea>
+                        <span asp-validation-for="CareerSummary" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Special Qualification</label>
+                    <div class="col-md-9">
+                        <textarea rows="4" asp-for="SpeciaQualification" class="form-control"></textarea>
+                        <span asp-validation-for="SpeciaQualification" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Keywords</label>
+                    <div class="col-md-9">
+                        <input rows="4" asp-for="Keywords" class="form-control" />
+                        <span asp-validation-for="Keywords" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+</form>

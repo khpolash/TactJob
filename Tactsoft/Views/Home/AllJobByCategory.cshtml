@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Tactsoft.Core.Entities.PostingJobs>
+
+@{
+    ViewData["Title"] = "AllJobByCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!-- =========== Browse Jobs Page Start =========== -->
+<div class="browse-jobs">
+    @if (Model.Count() > 0)
+    {
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <h4>@Model.Count() Jobs in <label> @Model.ToList()[0].JobCategory.JobCategoryeName</label></h4>
+                <div class="col-md-10">
+                    <div class="job-category-list">
+                        <a asp-action="JobDetails" asp-controller="Home" asp-route-Id="@item.Id">
+                            <div class="jobs-card">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h4 class="job-title">@item.JobTittle</h4>
+                                        <h6 class="company-name">@item.CompanyName</h6>
+                                        <div>
+                                            <div class="d-flex location">
+                                                <div class="icon">
+                                                    <i class="bi bi-geo-alt-fill"></i>
+                                                </div>
+                                                <div class="location-name">
+                                                    <p>@item.JobAddress</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex education">
+                                                <div class="icon">
+                                                    <i class="bi bi-mortarboard-fill"></i>
+                                                </div>
+                                                <div class="education-name">
+                                                    <p>
+                                                        @item.EducationRequirment
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex exp">
+                                                <div class="icon">
+                                                    <i class="bi bi-briefcase-fill"></i>
+                                                </div>
+                                                <div class="experience">
+                                                    <p>@item.MinimumYearofExperience to @item.MaximumYearofExperience Year's</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        <div class="d-flex dead-line">
+                                            <div class="icon">
+                                                <i class="bi bi-calendar-event"></i>
+                                            </div>
+                                            <div class="date">
+                                                <p>Deadline: @item.ApplicationDeadline.ToString("dd/MM/yyyy")</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="company-logo">
+                                            <img src="~/images/postingjobs/@Html.DisplayFor(modelItem => item.CompanyLogo)" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        }
+        <br />
+    }
+    
+</div>
+
+
+
+<!-- =========== Browse Jobs Page End =========== -->

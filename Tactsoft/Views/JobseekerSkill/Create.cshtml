@@ -1,0 +1,128 @@
+﻿@model Tactsoft.Core.Entities.JobseekerSkill
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Academic Summary Registraion Form</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">Academic Summary info</h3>
+                </div>
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                        <div class="row mt-2">
+                            <div class="col-md-12">
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Skill</label>
+                                    <div class="col-md-9">
+                                        <input rows="4" asp-for="JobseekerSkillName" class="form-control" />
+                                        <span asp-validation-for="JobseekerSkillName" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">How did you learn the skill?</label>
+                                    <div class="col-md-9 pt-2 form-check">
+                                        <label class="radio-inline mx-2">
+                                            @Html.RadioButtonFor(model => model.Self, "Self", htmlAttributes: new { @class = "form-check-input" }) Self
+                                        </label>
+                                        &nbsp;
+                                        &nbsp;
+                                        <label class="radio-inline mx-2">
+                                            @Html.RadioButtonFor(model => model.job, "Job", htmlAttributes: new { @class = "form-check-input" }) Job
+                                        </label>
+                                        &nbsp;
+                                        <label class="radio-inline mx-2">
+                                            @Html.RadioButtonFor(model => model.Educational, "Educational", htmlAttributes: new { @class = "form-check-input" }) Educational
+                                        </label>
+                                        &nbsp;
+                                        <label class="radio-inline mx-2">
+                                            @Html.RadioButtonFor(model => model.professionalTraining, "professional Training", htmlAttributes: new { @class = "form-check-input" }) professional Training
+                                        </label>
+                                        &nbsp;
+                                        <label class="radio-inline mx-2">
+                                            @Html.RadioButtonFor(model => model.NTVQF, "NTVQF", htmlAttributes: new { @class = "form-check-input" }) NTVQF
+                                        </label>
+                                    </div>
+                                </div>
+
+
+
+                                 
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Skill Description</label>
+                                    <div class="col-md-9">
+                                        <input rows="4" asp-for="JobseekerSkillDescription" class="form-control" />
+                                        <span asp-validation-for="JobseekerSkillDescription" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Extracurricular Activities</label>
+                                    <div class="col-md-9">
+                                        <input rows="4" asp-for="ExtracurricularActivities" class="form-control" />
+                                        <span asp-validation-for="ExtracurricularActivities" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                               
+                              
+
+                               
+
+                               
+
+
+                               
+
+
+                                
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div style="text-align:end">
+                            <a class="btn btn-outline-danger btn-sm" asp-action="Index">
+                                <i class="far fa-window-close"></i> Cancel
+                            </a>
+                            <button type="submit" value="Create" class="btn btn-outline-primary btn-sm">
+                                <i class="far fa-save"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

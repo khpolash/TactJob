@@ -1,0 +1,73 @@
+﻿@model Tactsoft.Core.Entities.JobseekerSkill
+
+
+
+<form asp-action="Create" asp-controller="JobseekerSkill" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Skill</label>
+                    <div class="col-md-9">
+                        <input rows="4" asp-for="JobseekerSkillName" class="form-control" />
+                        <span asp-validation-for="JobseekerSkillName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">How did you learn the skill?</label>
+                    <div class="col-md-9 pt-2 form-check">
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.Self, "Self", htmlAttributes: new { @class = "form-check-input" }) Self
+                        </label>
+                        &nbsp;
+                        &nbsp;
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.job, "Job", htmlAttributes: new { @class = "form-check-input" }) Job
+                        </label>
+                        &nbsp;
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.Educational, "Educational", htmlAttributes: new { @class = "form-check-input" }) Educational
+                        </label>
+                        &nbsp;
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.professionalTraining, "professional Training", htmlAttributes: new { @class = "form-check-input" }) professional Training
+                        </label>
+                        &nbsp;
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.NTVQF, "NTVQF", htmlAttributes: new { @class = "form-check-input" }) NTVQF
+                        </label>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Skill Description</label>
+                    <div class="col-md-9">
+                        <textarea rows="4" asp-for="JobseekerSkillDescription" class="form-control"></textarea>
+                        <span asp-validation-for="JobseekerSkillDescription" class="text-danger"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Extracurricular Activities</label>
+                    <div class="col-md-9">
+                        <input rows="4" asp-for="ExtracurricularActivities" class="form-control" />
+                        <span asp-validation-for="ExtracurricularActivities" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+   
+</form>

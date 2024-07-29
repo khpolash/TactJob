@@ -1,0 +1,232 @@
+﻿@model Tactsoft.Core.Entities.PersonalDetails
+@*
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+
+
+<form asp-action="AddorEdit" asp-controller="PersonalDetails"  enctype="multipart/form-data">
+
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+	<input asp-for="@Model.Id" type="hidden"  />
+	
+	<input asp-for="JobseekerId" type="hidden" value="@(TempData["jobseekerId"])" />
+	<div class="row mt-2 ">
+		<div class="col-md-6">
+			<div class="row mb-2">
+				<label asp-for="FirstName" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="FirstName" class="form-control" />
+					<span asp-validation-for="FirstName" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<label asp-for="LastName" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="LastName" class="form-control" />
+					<span asp-validation-for="LastName" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="LastName" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="LastName" class="form-control" />
+					<span asp-validation-for="LastName" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<label asp-for="FatherName" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="FatherName" class="form-control" />
+					<span asp-validation-for="FatherName" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="MotherName" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="MotherName" class="form-control" />
+					<span asp-validation-for="MotherName" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="DateofBirth" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input type="date" asp-for="DateofBirth" class="form-control" min="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
+					<span asp-validation-for="DateofBirth" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="Gender" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8 pt-2">
+					<label class="radio-inline mx-2">
+						@Html.RadioButtonFor(model => model.Gender, "Male", htmlAttributes: new { @class = "form-check-input" }) Male
+					</label>
+					<label class="radio-inline mx-2">
+						@Html.RadioButtonFor(model => model.Gender, "Female", htmlAttributes: new { @class = "form-check-input" }) Female
+					</label>
+					<label class="radio-inline mx-2">
+						@Html.RadioButtonFor(model => model.Gender, "Other", htmlAttributes: new { @class = "form-check-input" }) Other
+					</label>
+					<br />
+					<span asp-validation-for="Gender" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label class="col-md-4 col-form-label">Religion</label>
+				<div class="col-md-8">
+					<input rows="4" asp-for="Religion" class="form-control" />
+					<span asp-validation-for="Religion" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="MaritalStatus" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8 pt-2">
+					<label class="radio-inline mx-2">
+						@Html.RadioButtonFor(model => model.MaritalStatus, "Married", htmlAttributes: new { @class = "form-check-input" }) Married
+					</label>
+					<label class="radio-inline mx-2">
+						@Html.RadioButtonFor(model => model.MaritalStatus, "Unmarried", htmlAttributes: new { @class = "form-check-input" }) Unmarried
+					</label>
+
+					<br />
+					<span asp-validation-for="Gender" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="Nationality" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="Nationality" class="form-control" />
+					<span asp-validation-for="Nationality" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label class="col-md-4 col-form-label">National Id</label>
+				<div class="col-md-8">
+					<input asp-for="NationalId" class="form-control" />
+					<span asp-validation-for="NationalId" class="text-danger"></span>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="col-md-6">
+
+
+			<div class="row mb-2">
+				<label asp-for="PassportNumber" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="PassportNumber" class="form-control" />
+					<span asp-validation-for="PassportNumber" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="PassportIssueDate" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input type="date" asp-for="PassportIssueDate" class="form-control" min="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
+					<span asp-validation-for="PassportIssueDate" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="row mb-2">
+				<label asp-for="PrimaryMobile" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="PrimaryMobile" class="form-control" />
+					<span asp-validation-for="PrimaryMobile" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="SecondaryMobile" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="SecondaryMobile" class="form-control" />
+					<span asp-validation-for="SecondaryMobile" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="EmergencContact" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="EmergencContact" class="form-control" />
+					<span asp-validation-for="EmergencContact" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<label asp-for="PrimaryEmail" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="PrimaryEmail" class="form-control" />
+					<span asp-validation-for="PrimaryEmail" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="AlternateEmail" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="AlternateEmail" class="form-control" />
+					<span asp-validation-for="AlternateEmail" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="BloodGroupId" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<select asp-for="BloodGroupId" class="form-control" asp-items="ViewBag.BloodGroupId">
+						<option value="">--Select Blood Group--</option>
+					</select>
+					<span asp-validation-for="BloodGroupId" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<label asp-for="Height" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="Height" class="form-control" />
+					<span asp-validation-for="Height" class="text-danger"></span>
+				</div>
+			</div>
+
+			<div class="row mb-2">
+				<label asp-for="Weight" class="col-md-4 col-form-label"></label>
+				<div class="col-md-8">
+					<input asp-for="Weight" class="form-control" />
+					<span asp-validation-for="Weight" class="text-danger"></span>
+				</div>
+			</div>
+
+
+			<div class="col-12">
+				<button type="submit" value="Create" class="btn btn-primary">Submit</button>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+</form>
+
+
+
+
+
+<script src="~/admin-lte/js/imagepreview.js"></script>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+	}
+    }

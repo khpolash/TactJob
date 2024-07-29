@@ -1,0 +1,198 @@
+﻿@model Tactsoft.Core.ViewModel.CompanyLoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/plugins/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="~/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+
+        /*  SignIn Start =====================================*/
+        .signin-section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 40px 0px;
+            overflow-x: hidden;
+        }
+
+            .signin-section .signin-body {
+                width: 30%;
+                margin: auto;
+                padding: 20px 20px;
+                border-style: solid;
+                border-color: #DBD6D6;
+                border-width: 1px;
+                background-color: white;
+                border-radius: 4px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+
+                .signin-section .signin-body .svg-img {
+                    width: 100%;
+                    border: none;
+                    text-align: center;
+                }
+
+                    .signin-section .signin-body .svg-img img {
+                        width: 130px;
+                        height: 90px;
+                    }
+
+                .signin-section .signin-body h4 {
+                    font-size: 24px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 600;
+                }
+
+                .signin-section .signin-body p {
+                    color: #6A6868;
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .signin-section .signin-body form input:focus {
+                    border-color: #272727;
+                    outline: #272727;
+                    box-shadow: none;
+                }
+
+                .signin-section .signin-body form .forgotten a {
+                    text-decoration: none;
+                    color: #6A6868;
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                    .signin-section .signin-body form .forgotten a:hover {
+                        text-decoration: underline;
+                    }
+
+                .signin-section .signin-body form .create-account a {
+                    text-decoration: none;
+                    color: #6A6868;
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                    .signin-section .signin-body form .create-account a:hover {
+                        text-decoration: underline;
+                    }
+
+                .signin-section .signin-body form .form-check input:checked {
+                    border-color: #FC4501;
+                    background-color: #FC4501;
+                }
+
+                .signin-section .signin-body form .signIn-btn {
+                    width: 100%;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    color: white;
+                    font-size: 14px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    margin: auto;
+                    background-color: #FC4501;
+                    border-style: solid;
+                    border-color: #FC4501;
+                    border-radius: 4px;
+                }
+
+                    .signin-section .signin-body form .signIn-btn:hover {
+                        background-color: #272727;
+                        border-color: #272727;
+                        transition: .6s ease-in-out;
+                    }
+
+        form #togglePassword, #toggleConPassword {
+            position: relative;
+            top: -29px;
+            left: 94%;
+            cursor: pointer;
+        }
+        /*  SignIn End  =====================================*/
+
+        @@media only screen and (max-width: 991px) {
+            .signin-section .signin-body {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- =========== SignIn Start =========== -->
+    <div class="signin-section">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="signin-body">
+                    <div class="svg-img">
+                        <img src="~/assets/img/undraw_login_re_4vu2.svg" class="img-fluid" alt="Login">
+                    </div>
+                    <h4 class="text-center mt-3">Company SignIn</h4>
+                    <p class="text-center">Lorem, ipsum, dolor sit amet consectetur</p>
+                    <form class="row g-2 needs-validation" asp-action="CompanyLogin" asp-controller="Account">
+                        <div class="col-md-12">
+                            <label asp-for="UserName" class="form-label"></label>
+                            <input type="text" class="form-control" asp-for="UserName" required>
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input type="password" class="form-control" asp-for="Password" required>
+                            <i class="bi bi-eye-slash" id="togglePassword"></i>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-around">
+                                <div class="forgotten">
+                                    <a href="#">Forgot Password?</a>
+                                </div>
+                                <div class="create-account">
+                                    <a asp-action="CompanyRegister" asp-controller="Account">Create New Account</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary signIn-btn" type="submit">SignIn</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========== SignIn End =========== -->
+
+
+    <script src="~/plugins/jquery/jquery.js"></script>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#Password");
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+﻿@model Tactsoft.Core.Entities.TrainingSummary
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">Training Summary Registraion Form</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">Training Summary info</h3>
+                </div>
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                        <div class="row mt-2">
+                            <div class="col-md-6">
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Training Title</label>
+                                    <div class="col-md-9">
+                                        <input rows="4" asp-for="TrainingTitleName" class="form-control" />
+                                        <span asp-validation-for="TrainingTitleName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Country </label>
+                                    <div class="col-md-9">
+                                        <select asp-for="CountryId" class="form-control" asp-items="@(ViewBag.CountryId)">
+                                            <option value="">--Select Country--</option>
+                                        </select>
+                                        <span asp-validation-for="CountryId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Topics Covered</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="TopicsCovered" class="form-control" />
+                                        <span asp-validation-for="TopicsCovered" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                 <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Training Year</label>
+                                    <div class="col-md-9">
+                                        <select asp-for="YearId" class="form-control" asp-items="@(ViewBag.YearId)">
+                                            <option value="">Select Year</option>
+                                        </select>
+                                        <span asp-validation-for="YearId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Institute Name</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="InstituteName" class="form-control" />
+                                        <span asp-validation-for="InstituteName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Duration</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Duration" class="form-control" />
+                                        <span asp-validation-for="Duration" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-2">
+                                    <label class="col-md-3 col-form-label">Location</label>
+                                    <div class="col-md-9">
+                                        <input asp-for="Location" class="form-control" />
+                                        <span asp-validation-for="Location" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div style="text-align:end">
+                            <a class="btn btn-outline-danger btn-sm" asp-action="Index">
+                                <i class="far fa-window-close"></i> Cancel
+                            </a>
+                            <button type="submit" value="Create" class="btn btn-outline-primary btn-sm">
+                                <i class="far fa-save"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

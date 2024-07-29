@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tactsoft</title>
+
+    <partial name="FrontendPartial/Styles" />
+    
+    @await RenderSectionAsync("Styles", required: false)
+
+</head>
+<body>
+
+    <partial name="FrontendPartial/Header" />
+
+    <partial name="FrontendPartial/Navbar" />
+
+    @RenderBody()
+
+    <partial name="frontendPartial/Footer" />
+
+    <partial name="frontendPartial/Scripts" />
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

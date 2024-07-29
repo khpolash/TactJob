@@ -1,0 +1,92 @@
+﻿@model Tactsoft.Core.Entities.CareerAndApplicationInfo
+
+
+<form asp-action="Create" asp-controller="CareerAndApplicationInfo" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Objective</label>
+                    <div class="col-md-9">
+                        <input rows="4" asp-for="Objective" class="form-control" />
+                        <span asp-validation-for="Objective" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Looking for (Job Level)</label>
+                    <div class="col-md-9 pt-2">
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.JobLevel, "Entry Level", htmlAttributes: new { @class = "form-check-input" }) Entry Level
+                        </label>
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.JobLevel, "Mid Level", htmlAttributes: new { @class = "form-check-input" }) Mid Level
+                        </label>
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.JobLevel, "Other", htmlAttributes: new { @class = "form-check-input" }) Top Level
+                        </label>
+                        <br />
+                        <span asp-validation-for="JobLevel" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Present Salary</label>
+                    <div class="col-md-9">
+                        <input rows="4" asp-for="PresentSalary" class="form-control" />
+                        <span asp-validation-for="PresentSalary" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Expected Salary</label>
+                    <div class="col-md-9">
+                        <input rows="4" asp-for="ExpectedSalary" class="form-control" />
+                        <span asp-validation-for="ExpectedSalary" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Available for (Job Nature)</label>
+                    <div class="col-md-9 pt-2">
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.JobNature, "Full time", htmlAttributes: new { @class = "form-check-input" }) Full time
+                        </label>
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.JobNature, "Part time", htmlAttributes: new { @class = "form-check-input" }) Part time
+                        </label>
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.JobNature, "Contract", htmlAttributes: new { @class = "form-check-input" }) Contract
+                        </label>
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.JobNature, "Internship", htmlAttributes: new { @class = "form-check-input" }) Internship
+                        </label>
+                        <label class="radio-inline mx-2">
+                            @Html.RadioButtonFor(model => model.JobNature, "Freelance", htmlAttributes: new { @class = "form-check-input" }) Freelance
+                        </label>
+                        <br />
+                        <span asp-validation-for="JobNature" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+   
+</form>

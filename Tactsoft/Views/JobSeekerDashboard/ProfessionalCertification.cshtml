@@ -1,0 +1,68 @@
+﻿@model Tactsoft.Core.Entities.ProfessionalCertificationSummary
+
+
+<form asp-action="Create" asp-controller="ProfessionalCertificationSummary" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="row mb-2">
+                    <label asp-for="Certification" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Certification" class="form-control" />
+                        <span asp-validation-for="Certification" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label asp-for="Institute" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Institute" class="form-control" />
+                        <span asp-validation-for="Institute" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label asp-for="Location" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-9">
+                        <input asp-for="Location" class="form-control" />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Duration Start</label>
+                    <div class="col-md-9">
+                        <input type="date" asp-for="DurationStart" class="form-control" min="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
+                        <span asp-validation-for="DurationStart" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Duration End</label>
+                    <div class="col-md-9">
+                        <input type="date" asp-for="DurationEnd" class="form-control" min="@(DateTime.Now.ToString("yyyy-MM-dd"))" />
+                        <span asp-validation-for="DurationEnd" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+   
+</form>
+
+
+
+

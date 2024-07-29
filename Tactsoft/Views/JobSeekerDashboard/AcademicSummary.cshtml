@@ -1,0 +1,119 @@
+﻿@model Tactsoft.Core.Entities.AcademicSummary
+
+<form asp-action="Create" asp-controller="AcademicSummary" method="post" enctype="multipart/form-data">
+    <div class="card-body">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Level of Education </label>
+                    <div class="col-md-9">
+                        <select asp-for="LevelofEducationId" class="form-control" asp-items="@(ViewBag.LevelofEducationId)">
+                            <option value="">Select Level of Education</option>
+                        </select>
+                        <span asp-validation-for="LevelofEducationId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Exam/Degree Title</label>
+                    <div class="col-md-9">
+                        <select asp-for="degreeTitleId" class="form-control" asp-items="@(ViewBag.degreeTitleId)">
+                            <option value="">Select Degree Title</option>
+                        </select>
+                        <span asp-validation-for="degreeTitleId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Concentration/ Major/Group</label>
+                    <div class="col-md-9">
+                        <input rows="4" asp-for="Group" class="form-control" />
+                        <span asp-validation-for="Group" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Board</label>
+                    <div class="col-md-9">
+                        <select asp-for="boardId" class="form-control" asp-items="@(ViewBag.boardId)">
+                            <option value="">Select Board</option>
+                        </select>
+                        <span asp-validation-for="boardId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Institute Name</label>
+                    <div class="col-md-9">
+                        <input asp-for="InstituteName" class="form-control" />
+                        <span asp-validation-for="InstituteName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+
+                    <div class="col-md-9 pt-2">
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" asp-for="foreigInstitute" />
+                            <label class="form-check-label" asp-for="foreigInstitute">This is a foreign institute</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Country of Foreign University</label>
+                    <div class="col-md-9">
+                        <input asp-for="ForeignUniversityName" class="form-control" />
+                        <span asp-validation-for="ForeignUniversityName" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Result</label>
+                    <div class="col-md-9">
+                        <select asp-for="ResultId" class="form-control" asp-items="@(ViewBag.ResultId)">
+                            <option value="">Select Result</option>
+                        </select>
+                        <span asp-validation-for="ResultId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Year of Passing </label>
+                    <div class="col-md-9">
+                        <select asp-for="YearOfPassingId" class="form-control" asp-items="@(ViewBag.YearOfPassingId)">
+                            <option value="">Select Year of Passing </option>
+                        </select>
+                        <span asp-validation-for="YearOfPassingId" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Duration (Years)</label>
+                    <div class="col-md-9">
+                        <input asp-for="Duration" class="form-control" />
+                        <span asp-validation-for="Duration" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label class="col-md-3 col-form-label">Achievement</label>
+                    <div class="col-md-9">
+                        <input asp-for="Achievement" class="form-control" />
+                        <span asp-validation-for="Achievement" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+   
+</form>

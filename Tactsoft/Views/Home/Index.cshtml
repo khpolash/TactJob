@@ -1,0 +1,267 @@
+﻿@model Tactsoft.Core.ViewModel.FrontendViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .icons {
+        border: double 3px #999;
+        border-radius: 50%;
+    }
+
+        .icons i {
+            font-size: 30px;
+            padding: 10px;
+        }
+</style>
+
+<partial name="FrontendPartial/Banner" />
+
+<!-- =========== Job Vacancies Box Start =========== -->
+<div class="job-vancancies">
+    <div class="row">
+        <div class="col-md-3">
+            <a href="#">
+                <div class="card">
+                    <div class="icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Live Jobs</h4>
+                        <h2>@Model.NumberOfJobs</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <div class="card">
+                    <div class="icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Vacancies</h4>
+                        <h2>@Model.NumberOfVacancies</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <div class="card">
+                    <div class="icon">
+                        <i class="bi bi-buildings"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>Companies</h4>
+                        <h2>@Model.NumberOfCompanies</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#">
+                <div class="card">
+                    <div class="icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <div class="card-body">
+                        <h4>New Jobs</h4>
+                        <h2>@Model.NumberOfNewJobs</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- =========== Job Vacancies Box End =========== -->
+
+
+<!-- =========== Job Category Start =========== -->
+<div class="job-category">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="heading">
+                <div class="title">
+                    <h4>Choose Job Category</h4>
+                </div>
+                <div class="sub-title">
+                    <h6>Find quality talent or agencies</h6>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="all-Category mt-5">
+            <div class="row g-0">
+                @foreach (var item in Model.JobViewModels) {
+                    <div class="col-md-2">
+                        <a asp-action="AllJobByCategory" asp-controller="Home" asp-route-id="@item.Id">
+                            <div class="card">
+                                <div class="icon">
+
+                                    <img src="~/images/JobCategory/@Html.DisplayFor(modelItem => item.JobcategoryLogo)" class="img-fluid" alt="">
+                                </div>
+                                <div class="card-body" style="padding: 1rem .5rem;">
+                                    <div class="categoryName">
+                                        <h4>@item.JobCategoryName</h4>
+                                    </div>
+                                    <h6>@item.TotalJob <span>Jobs</span></h6>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- =========== Job Category End =========== -->
+<!-- =========== Hot Jobs Start =========== -->
+<div class="hot-jobs">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="heading">
+                <div class="title">
+                    <h4><i class="bi bi-fire"></i> Hot Jobs</h4>
+                </div>
+                <div class="sub-title">
+                    <h6>Your Job for a Future</h6>
+                </div>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="row g-0 mt-5">
+
+             @foreach (var item in Model.HotJobsView)
+                {
+                
+            <div class="col-md-3">
+                 
+                <div class="job-box d-flex">
+                    <div class="company-logo">
+                            <img src="~/images/postingjobs/@Html.DisplayFor(modelItem => item.ComapnyLogo)" class="img-fluid" alt="">
+                        </div>
+                        <div>
+                            <h4 class="company-name">@item.CompanyName</h4>
+
+                            <i class="bi bi-caret-right-fill"><a asp-action="JobDetails" class="text-decoration-none" asp-controller="Home" asp-route-Id="@item.Id"> @item.Jobtitle </a></i>
+                         </div>
+                </div>
+            </div>
+
+            }
+        </div>
+
+    </div>
+</div>
+<!-- =========== Hot Jobs End =========== -->
+<!-- =========== Role Collection Start =========== -->
+<div class="role-selection" >
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="first-section">
+                    <div class="img">
+                        <img src="assets/img/undraw_join_re_w1lh.svg" class="img-fluid" alt="">
+                    </div>
+                    <h2>Join the Largest Job Site of Bangladesh</h2>
+                    <p>Be a member of a family of more than one million job seekers and apply to any of the 3000+ live jobs</p>
+                </div>
+            </div>
+@*
+            <div class="col-md-7">
+                <div class="second-section">   
+
+                    <div class="row" id="job-role-slider">
+                        <div class="col-md-12">
+                            <div class="row">
+                                @foreach (var item in Model.TotalJobTiltles)
+                                {
+                                <div class="col-md-6">
+                                    <div class="col mb-3">
+                                            <a asp-action="JobDetails" asp-controller="Home" asp-route-id="@item.Id">
+                                            <div class="job-box">
+                                                <h4>@item.JobTitle</h4>
+                                                    <h6>@item.TotalJob Jobs <i class="bi bi-chevron-right"></i></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+<!-- =========== Role Collection End =========== -->
+<!-- ============Searh Modal Start============ -->
+<!-- Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search Keywords..." aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============Searh Modal End============ -->
+
+<partial name="~/Views/UIComponents/_bootstrapAlert.cshtml" />
+
+<script> 
+    /* ====Job Role Slider Start==== */
+    $('#job-role-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        autoplayHoverPause: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    /* ====Job Role Slider End==== */
+
+
+</script>

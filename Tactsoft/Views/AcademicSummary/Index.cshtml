@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Tactsoft.Core.Entities.AcademicSummary>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h4 class="m-0">@ViewData["Title"]</h4>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <h3 class="card-title">@ViewData["Title"] List</h3>
+                        <a class="btn btn-outline-primary btn-sm" asp-action="Create">
+                            <i class="fa-regular fa-pen-to-square"></i> Add New
+                        </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.LevelofEducationId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.degreeTitleId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Group)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.boardId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.InstituteName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.foreigInstitute)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ForeignUniversityName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ResultId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.YearOfPassingId)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Duration)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Achievement)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.JobseekerId)
+                                </th>
+
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LevelofEducation.LevelofEducationName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.degreeTitle.DegreeTitleName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Group)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.board.BoardName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.InstituteName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.foreigInstitute)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ForeignUniversityName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Result.ResultName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.YearOfPassing.YearOfPassingName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Duration)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Achievement)
+                                    </td>
+                                   
+                                    <td style="width:90px;text-align:center">
+                                        @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fa-regular fa-pen-to-square", @style = "color:green" }) |
+                                        @Html.ActionLink("", "Details", new { id = item.Id }, new { @class = "fa-regular fa-eye", @style = "color:blue" }) |
+                                        @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fa-regular fa-trash-can", @style = "color:red" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<partial name="~/Views/UIComponents/_bootstrapAlert.cshtml" />
+
+@section Scripts{
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": true, "autoWidth": true,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+    </script>
+}
